@@ -1,0 +1,5 @@
+<strings>
+    <string id="AppName">HourlyWeather</string>
+    <string id="curUVLabel">Current</string>
+    <string id="maxUVLabel">Max</string>
+</strings>
