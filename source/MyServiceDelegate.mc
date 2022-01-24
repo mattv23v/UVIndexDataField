@@ -24,8 +24,10 @@ class MyServiceDelegate extends System.ServiceDelegate {
   function onTemporalEvent() as Void{
     System.println("temporal event");
     var myLastLocation = Application.Storage.getValue("location");
-    System.println("Latitude: " + myLastLocation[0]); 
-    System.println("Longitude: " + myLastLocation[1]); 
+    lat = myLastLocation[0];
+    long = myLastLocation[1];
+    System.println("Latitude: " + lat); 
+    System.println("Longitude: " + long); 
 
       var options = {
             :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
@@ -40,8 +42,8 @@ class MyServiceDelegate extends System.ServiceDelegate {
             //"https://api.openweathermap.org/data/2.5/onecall?lat=35.78&lon=-78.64&exclude=alerts,minutely,hourly,daily&appid=2ca5acab977c95097e264298dd95ec77",
             //"https://api.openweathermap.org/data/2.5/weather?q=Raleigh&appid=2ca5acab977c95097e264298dd95ec77",
             //"https://api.openuv.io/api/v1/uv?lat=36.34&lng=-78.342T10%3A50%3A52.283Z",
-            "https://api.openweathermap.org/data/2.5/onecall?lat=35.78&lon=-78.64&exclude=alerts,minutely,hourly&appid=2ca5acab977c95097e264298dd95ec77",
-
+            //"https://api.openweathermap.org/data/2.5/onecall?lat=35.78&lon=-78.64&exclude=alerts,minutely,hourly&appid=2ca5acab977c95097e264298dd95ec77",
+            "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+long+"&exclude=alerts,minutely,hourly&appid=2ca5acab977c95097e264298dd95ec77",
             {},
             options,
             method(:responseCallback)

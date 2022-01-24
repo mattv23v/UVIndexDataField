@@ -45,16 +45,16 @@ class UVIndexFieldView extends WatchUi.DataField {
             View.setLayout(Rez.Layouts.MainLayout(dc));
             var labelView = View.findDrawableById("curUVLabel");
             labelView.locY = labelView.locY - 16;
-            labelView.locX = labelView.locX - 30;
+            labelView.locX = labelView.locX - 20;
             var labelView2 = View.findDrawableById("maxUVLabel");
             labelView2.locY = labelView2.locY - 16;
-            labelView2.locX = labelView2.locX + 10;
+            labelView2.locX = labelView2.locX + 25;
             var valueView = View.findDrawableById("curUVValue");
             valueView.locY = valueView.locY + 7;
-            valueView.locX = valueView.locX - 38;
+            valueView.locX = valueView.locX - 28;
             var valueView2 = View.findDrawableById("maxUVValue");
             valueView2.locY = valueView2.locY + 7;
-            valueView2.locX = valueView2.locX + 12;
+            valueView2.locX = valueView2.locX + 27;
 
         }
 
@@ -76,30 +76,30 @@ class UVIndexFieldView extends WatchUi.DataField {
     // Display the value you computed here. This will be called
     // once a second when the data field is visible.
     function onUpdate(dc as Dc) as Void {
+
         // Set the background color 
         var bgColor = Graphics.COLOR_WHITE;
         var uv = uvIndexFieldApp.getUv();
         //(View.findDrawableById("Background") as Text).setColor(getBackgroundColor());
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
 
+
         // Set the foreground color and value
         var curUValue = View.findDrawableById("curUVValue") as Text;
         var maxUValue = View.findDrawableById("maxUVValue") as Text;
         curUValue.setColor(Graphics.COLOR_BLACK);
         maxUValue.setColor(Graphics.COLOR_BLACK);
-      
-     
         if (uv[0] !=null) {
             if (uv[0]<=2.99) {
                 bgColor = Graphics.COLOR_GREEN;
             }
-            else if (uv[0]>=3 && uv<=5.99){
+            else if (uv[0]>=3 && uv[0]<=5.99){
                 bgColor = Graphics.COLOR_YELLOW;
             }
-            else if (uv[0]>=6 && uv<=7.99){
+            else if (uv[0]>=6 && uv[0]<=7.99){
                 bgColor = Graphics.COLOR_ORANGE;
             }
-             else if (uv[0]>=8 && uv<=10.99){
+             else if (uv[0]>=8 && uv[0]<=10.99){
                 bgColor = Graphics.COLOR_RED;
             }
              else if (uv[0]>=11) {
@@ -109,9 +109,9 @@ class UVIndexFieldView extends WatchUi.DataField {
         curUValue.setText(uv[0].format("%.2f"));
         maxUValue.setText(uv[1].format("%.2f"));
 
-        
 
         View.findDrawableById("Background").setColor(bgColor);
+
         // Call parent's onUpdate(dc) to redraw the layout
         View.onUpdate(dc);
     }

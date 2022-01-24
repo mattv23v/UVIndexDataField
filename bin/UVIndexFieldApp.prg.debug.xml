@@ -2,17 +2,17 @@
 <debugInfo>
 <manifest filename="C:\Garmin Projects\UVIndexFieldApp\manifest.xml"/>
 <pcToLineNum>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="1" lineNum="9" parent="globals/Background" pc="268436390" symbol="initialize"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="1" lineNum="10" parent="globals/Background" pc="268436394" symbol="initialize"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="1" lineNum="14" parent="globals/Background" pc="268436415" symbol="initialize"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="1" lineNum="16" parent="globals/Background" pc="268436435" symbol="initialize"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="2" lineNum="19" parent="globals/Background" pc="268436456" symbol="setColor"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="2" lineNum="20" parent="globals/Background" pc="268436460" symbol="setColor"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="3" lineNum="23" parent="globals/Background" pc="268436471" symbol="draw"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="3" lineNum="24" parent="globals/Background" pc="268436475" symbol="draw"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="3" lineNum="25" parent="globals/Background" pc="268436507" symbol="draw"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="4" lineNum="5" parent="globals/Background" pc="268441159" symbol="&lt;init&gt;"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="4" lineNum="5" parent="globals/Background" pc="268441159" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="1" lineNum="9" parent="globals/Background" pc="268436452" symbol="initialize"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="1" lineNum="10" parent="globals/Background" pc="268436456" symbol="initialize"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="1" lineNum="14" parent="globals/Background" pc="268436477" symbol="initialize"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="1" lineNum="16" parent="globals/Background" pc="268436497" symbol="initialize"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="2" lineNum="19" parent="globals/Background" pc="268436518" symbol="setColor"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="2" lineNum="20" parent="globals/Background" pc="268436522" symbol="setColor"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="3" lineNum="23" parent="globals/Background" pc="268436533" symbol="draw"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="3" lineNum="24" parent="globals/Background" pc="268436537" symbol="draw"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="3" lineNum="25" parent="globals/Background" pc="268436569" symbol="draw"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="4" lineNum="5" parent="globals/Background" pc="268441239" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldBackground.mc" id="4" lineNum="5" parent="globals/Background" pc="268441239" symbol="&lt;init&gt;"/>
 <entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="6" lineNum="17" parent="globals/MyServiceDelegate" pc="268435456" symbol="initialize"/>
 <entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="6" lineNum="18" parent="globals/MyServiceDelegate" pc="268435460" symbol="initialize"/>
 <entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="6" lineNum="19" parent="globals/MyServiceDelegate" pc="268435481" symbol="initialize"/>
@@ -20,150 +20,152 @@
 <entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="7" lineNum="25" parent="globals/MyServiceDelegate" pc="268435504" symbol="onTemporalEvent"/>
 <entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="7" lineNum="26" parent="globals/MyServiceDelegate" pc="268435525" symbol="onTemporalEvent"/>
 <entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="7" lineNum="27" parent="globals/MyServiceDelegate" pc="268435553" symbol="onTemporalEvent"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="7" lineNum="28" parent="globals/MyServiceDelegate" pc="268435583" symbol="onTemporalEvent"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="7" lineNum="30" parent="globals/MyServiceDelegate" pc="268435613" symbol="onTemporalEvent"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="7" lineNum="39" parent="globals/MyServiceDelegate" pc="268435692" symbol="onTemporalEvent"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="51" parent="globals/MyServiceDelegate" pc="268435740" symbol="responseCallback"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="55" parent="globals/MyServiceDelegate" pc="268435744" symbol="responseCallback"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="56" parent="globals/MyServiceDelegate" pc="268435780" symbol="responseCallback"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="58" parent="globals/MyServiceDelegate" pc="268435804" symbol="responseCallback"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="66" parent="globals/MyServiceDelegate" pc="268435815" symbol="responseCallback"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="67" parent="globals/MyServiceDelegate" pc="268435831" symbol="responseCallback"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="68" parent="globals/MyServiceDelegate" pc="268435853" symbol="responseCallback"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="69" parent="globals/MyServiceDelegate" pc="268435881" symbol="responseCallback"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="9" lineNum="11" parent="globals/MyServiceDelegate" pc="268436371" symbol="&lt;init&gt;"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="9" lineNum="11" parent="globals/MyServiceDelegate" pc="268436371" symbol="&lt;init&gt;"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="11" lineNum="17" parent="globals/UVIndexFieldView" pc="268436520" symbol="initialize"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="11" lineNum="18" parent="globals/UVIndexFieldView" pc="268436524" symbol="initialize"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="11" lineNum="19" parent="globals/UVIndexFieldView" pc="268436542" symbol="initialize"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="26" parent="globals/UVIndexFieldView" pc="268436566" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="27" parent="globals/UVIndexFieldView" pc="268436570" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="29" parent="globals/UVIndexFieldView" pc="268436589" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="30" parent="globals/UVIndexFieldView" pc="268436612" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="32" parent="globals/UVIndexFieldView" pc="268436658" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="33" parent="globals/UVIndexFieldView" pc="268436681" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="36" parent="globals/UVIndexFieldView" pc="268436727" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="37" parent="globals/UVIndexFieldView" pc="268436750" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="40" parent="globals/UVIndexFieldView" pc="268436796" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="41" parent="globals/UVIndexFieldView" pc="268436819" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="45" parent="globals/UVIndexFieldView" pc="268436865" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="46" parent="globals/UVIndexFieldView" pc="268436908" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="47" parent="globals/UVIndexFieldView" pc="268436932" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="48" parent="globals/UVIndexFieldView" pc="268436954" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="49" parent="globals/UVIndexFieldView" pc="268436976" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="50" parent="globals/UVIndexFieldView" pc="268437000" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="51" parent="globals/UVIndexFieldView" pc="268437022" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="52" parent="globals/UVIndexFieldView" pc="268437044" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="53" parent="globals/UVIndexFieldView" pc="268437068" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="54" parent="globals/UVIndexFieldView" pc="268437090" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="55" parent="globals/UVIndexFieldView" pc="268437112" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="56" parent="globals/UVIndexFieldView" pc="268437136" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="57" parent="globals/UVIndexFieldView" pc="268437158" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="61" parent="globals/UVIndexFieldView" pc="268437180" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="62" parent="globals/UVIndexFieldView" pc="268437232" symbol="onLayout"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="13" lineNum="66" parent="globals/UVIndexFieldView" pc="268437285" symbol="compute"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="13" lineNum="68" parent="globals/UVIndexFieldView" pc="268437289" symbol="compute"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="13" lineNum="69" parent="globals/UVIndexFieldView" pc="268437302" symbol="compute"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="13" lineNum="70" parent="globals/UVIndexFieldView" pc="268437321" symbol="compute"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="78" parent="globals/UVIndexFieldView" pc="268437363" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="80" parent="globals/UVIndexFieldView" pc="268437367" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="81" parent="globals/UVIndexFieldView" pc="268437381" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="83" parent="globals/UVIndexFieldView" pc="268437400" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="86" parent="globals/UVIndexFieldView" pc="268437436" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="87" parent="globals/UVIndexFieldView" pc="268437460" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="88" parent="globals/UVIndexFieldView" pc="268437484" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="89" parent="globals/UVIndexFieldView" pc="268437508" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="92" parent="globals/UVIndexFieldView" pc="268437532" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="93" parent="globals/UVIndexFieldView" pc="268437545" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="94" parent="globals/UVIndexFieldView" pc="268437562" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="96" parent="globals/UVIndexFieldView" pc="268437579" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="97" parent="globals/UVIndexFieldView" pc="268437610" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="99" parent="globals/UVIndexFieldView" pc="268437627" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="100" parent="globals/UVIndexFieldView" pc="268437658" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="102" parent="globals/UVIndexFieldView" pc="268437675" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="103" parent="globals/UVIndexFieldView" pc="268437706" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="105" parent="globals/UVIndexFieldView" pc="268437723" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="106" parent="globals/UVIndexFieldView" pc="268437740" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="109" parent="globals/UVIndexFieldView" pc="268437760" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="110" parent="globals/UVIndexFieldView" pc="268437794" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="114" parent="globals/UVIndexFieldView" pc="268437828" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="116" parent="globals/UVIndexFieldView" pc="268437862" symbol="onUpdate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="15" lineNum="13" parent="globals/UVIndexFieldView" pc="268441178" symbol="&lt;init&gt;"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="15" lineNum="13" parent="globals/UVIndexFieldView" pc="268441178" symbol="&lt;init&gt;"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="17" lineNum="15" parent="globals/UVIndexFieldApp" pc="268435903" symbol="initialize"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="17" lineNum="17" parent="globals/UVIndexFieldApp" pc="268435907" symbol="initialize"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="17" lineNum="19" parent="globals/UVIndexFieldApp" pc="268435925" symbol="initialize"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="17" lineNum="20" parent="globals/UVIndexFieldApp" pc="268435942" symbol="initialize"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="17" lineNum="22" parent="globals/UVIndexFieldApp" pc="268435949" symbol="initialize"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="17" lineNum="23" parent="globals/UVIndexFieldApp" pc="268435970" symbol="initialize"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="17" lineNum="25" parent="globals/UVIndexFieldApp" pc="268435991" symbol="initialize"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="18" lineNum="29" parent="globals/UVIndexFieldApp" pc="268436023" symbol="getServiceDelegate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="18" lineNum="30" parent="globals/UVIndexFieldApp" pc="268436027" symbol="getServiceDelegate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="18" lineNum="31" parent="globals/UVIndexFieldApp" pc="268436037" symbol="getServiceDelegate"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="19" lineNum="36" parent="globals/UVIndexFieldApp" pc="268436079" symbol="onStart"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="20" lineNum="40" parent="globals/UVIndexFieldApp" pc="268436084" symbol="onStop"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="20" lineNum="41" parent="globals/UVIndexFieldApp" pc="268436088" symbol="onStop"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="20" lineNum="42" parent="globals/UVIndexFieldApp" pc="268436100" symbol="onStop"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="20" lineNum="43" parent="globals/UVIndexFieldApp" pc="268436121" symbol="onStop"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="21" lineNum="47" parent="globals/UVIndexFieldApp" pc="268436141" symbol="getUv"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="21" lineNum="48" parent="globals/UVIndexFieldApp" pc="268436145" symbol="getUv"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="22" lineNum="51" parent="globals/UVIndexFieldApp" pc="268436155" symbol="onBackgroundData"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="22" lineNum="52" parent="globals/UVIndexFieldApp" pc="268436159" symbol="onBackgroundData"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="22" lineNum="53" parent="globals/UVIndexFieldApp" pc="268436180" symbol="onBackgroundData"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="22" lineNum="54" parent="globals/UVIndexFieldApp" pc="268436198" symbol="onBackgroundData"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="23" lineNum="58" parent="globals/UVIndexFieldApp" pc="268436209" symbol="getInitialView"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="23" lineNum="59" parent="globals/UVIndexFieldApp" pc="268436213" symbol="getInitialView"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="24" lineNum="63" parent="globals/UVIndexFieldApp" pc="268436251" symbol="getApp"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="24" lineNum="64" parent="globals/UVIndexFieldApp" pc="268436255" symbol="getApp"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="25" lineNum="10" parent="globals/UVIndexFieldApp" pc="268436273" symbol="&lt;init&gt;"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="25" lineNum="11" parent="globals/UVIndexFieldApp" pc="268436291" symbol="&lt;init&gt;"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="25" lineNum="13" parent="globals/UVIndexFieldApp" pc="268436331" symbol="&lt;init&gt;"/>
-<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="25" lineNum="10" parent="globals/UVIndexFieldApp" pc="268436273" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="27" lineNum="2" parent="globals/Rez/Drawables" pc="268441221" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="28" lineNum="6" parent="globals/Rez/Fonts" pc="268441223" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="29" lineNum="8" parent="globals/Rez/JsonData" pc="268441225" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="30" lineNum="17" parent="globals/Rez/Layouts" pc="268437883" symbol="MainLayout"/>
-<entry filename="Rez" id="30" lineNum="19" parent="globals/Rez/Layouts" pc="268437895" symbol="MainLayout"/>
-<entry filename="Rez" id="30" lineNum="20" parent="globals/Rez/Layouts" pc="268437908" symbol="MainLayout"/>
-<entry filename="Rez" id="30" lineNum="22" parent="globals/Rez/Layouts" pc="268437921" symbol="MainLayout"/>
-<entry filename="Rez" id="30" lineNum="23" parent="globals/Rez/Layouts" pc="268437945" symbol="MainLayout"/>
-<entry filename="Rez" id="30" lineNum="24" parent="globals/Rez/Layouts" pc="268438108" symbol="MainLayout"/>
-<entry filename="Rez" id="30" lineNum="25" parent="globals/Rez/Layouts" pc="268438271" symbol="MainLayout"/>
-<entry filename="Rez" id="30" lineNum="26" parent="globals/Rez/Layouts" pc="268438434" symbol="MainLayout"/>
-<entry filename="Rez" id="30" lineNum="28" parent="globals/Rez/Layouts" pc="268438597" symbol="MainLayout"/>
-<entry filename="Rez" id="31" lineNum="37" parent="globals/Rez/Layouts" pc="268438655" symbol="TopLeftLayout"/>
-<entry filename="Rez" id="31" lineNum="40" parent="globals/Rez/Layouts" pc="268438667" symbol="TopLeftLayout"/>
-<entry filename="Rez" id="31" lineNum="41" parent="globals/Rez/Layouts" pc="268438691" symbol="TopLeftLayout"/>
-<entry filename="Rez" id="31" lineNum="42" parent="globals/Rez/Layouts" pc="268438824" symbol="TopLeftLayout"/>
-<entry filename="Rez" id="31" lineNum="43" parent="globals/Rez/Layouts" pc="268438957" symbol="TopLeftLayout"/>
-<entry filename="Rez" id="31" lineNum="44" parent="globals/Rez/Layouts" pc="268439090" symbol="TopLeftLayout"/>
-<entry filename="Rez" id="31" lineNum="46" parent="globals/Rez/Layouts" pc="268439223" symbol="TopLeftLayout"/>
-<entry filename="Rez" id="32" lineNum="55" parent="globals/Rez/Layouts" pc="268439281" symbol="TopRightLayout"/>
-<entry filename="Rez" id="32" lineNum="58" parent="globals/Rez/Layouts" pc="268439293" symbol="TopRightLayout"/>
-<entry filename="Rez" id="32" lineNum="59" parent="globals/Rez/Layouts" pc="268439317" symbol="TopRightLayout"/>
-<entry filename="Rez" id="32" lineNum="60" parent="globals/Rez/Layouts" pc="268439450" symbol="TopRightLayout"/>
-<entry filename="Rez" id="32" lineNum="61" parent="globals/Rez/Layouts" pc="268439583" symbol="TopRightLayout"/>
-<entry filename="Rez" id="32" lineNum="62" parent="globals/Rez/Layouts" pc="268439716" symbol="TopRightLayout"/>
-<entry filename="Rez" id="32" lineNum="64" parent="globals/Rez/Layouts" pc="268439849" symbol="TopRightLayout"/>
-<entry filename="Rez" id="33" lineNum="73" parent="globals/Rez/Layouts" pc="268439907" symbol="BottomLeftLayout"/>
-<entry filename="Rez" id="33" lineNum="76" parent="globals/Rez/Layouts" pc="268439919" symbol="BottomLeftLayout"/>
-<entry filename="Rez" id="33" lineNum="77" parent="globals/Rez/Layouts" pc="268439943" symbol="BottomLeftLayout"/>
-<entry filename="Rez" id="33" lineNum="78" parent="globals/Rez/Layouts" pc="268440076" symbol="BottomLeftLayout"/>
-<entry filename="Rez" id="33" lineNum="79" parent="globals/Rez/Layouts" pc="268440209" symbol="BottomLeftLayout"/>
-<entry filename="Rez" id="33" lineNum="80" parent="globals/Rez/Layouts" pc="268440342" symbol="BottomLeftLayout"/>
-<entry filename="Rez" id="33" lineNum="82" parent="globals/Rez/Layouts" pc="268440475" symbol="BottomLeftLayout"/>
-<entry filename="Rez" id="34" lineNum="91" parent="globals/Rez/Layouts" pc="268440533" symbol="BottomRightLayout"/>
-<entry filename="Rez" id="34" lineNum="94" parent="globals/Rez/Layouts" pc="268440545" symbol="BottomRightLayout"/>
-<entry filename="Rez" id="34" lineNum="95" parent="globals/Rez/Layouts" pc="268440569" symbol="BottomRightLayout"/>
-<entry filename="Rez" id="34" lineNum="96" parent="globals/Rez/Layouts" pc="268440702" symbol="BottomRightLayout"/>
-<entry filename="Rez" id="34" lineNum="97" parent="globals/Rez/Layouts" pc="268440835" symbol="BottomRightLayout"/>
-<entry filename="Rez" id="34" lineNum="98" parent="globals/Rez/Layouts" pc="268440968" symbol="BottomRightLayout"/>
-<entry filename="Rez" id="34" lineNum="100" parent="globals/Rez/Layouts" pc="268441101" symbol="BottomRightLayout"/>
-<entry filename="Rez" id="35" lineNum="10" parent="globals/Rez/Layouts" pc="268441224" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="36" lineNum="105" parent="globals/Rez/Menus" pc="268441222" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="37" lineNum="107" parent="globals/Rez/Strings" pc="268441226" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="38" lineNum="1" parent="globals/Rez" pc="268441197" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="38" lineNum="1" parent="globals/Rez" pc="268441197" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="7" lineNum="28" parent="globals/MyServiceDelegate" pc="268435569" symbol="onTemporalEvent"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="7" lineNum="29" parent="globals/MyServiceDelegate" pc="268435585" symbol="onTemporalEvent"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="7" lineNum="30" parent="globals/MyServiceDelegate" pc="268435615" symbol="onTemporalEvent"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="7" lineNum="32" parent="globals/MyServiceDelegate" pc="268435645" symbol="onTemporalEvent"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="7" lineNum="41" parent="globals/MyServiceDelegate" pc="268435724" symbol="onTemporalEvent"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="53" parent="globals/MyServiceDelegate" pc="268435802" symbol="responseCallback"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="57" parent="globals/MyServiceDelegate" pc="268435806" symbol="responseCallback"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="58" parent="globals/MyServiceDelegate" pc="268435842" symbol="responseCallback"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="60" parent="globals/MyServiceDelegate" pc="268435866" symbol="responseCallback"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="68" parent="globals/MyServiceDelegate" pc="268435877" symbol="responseCallback"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="69" parent="globals/MyServiceDelegate" pc="268435893" symbol="responseCallback"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="70" parent="globals/MyServiceDelegate" pc="268435915" symbol="responseCallback"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="8" lineNum="71" parent="globals/MyServiceDelegate" pc="268435943" symbol="responseCallback"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="9" lineNum="11" parent="globals/MyServiceDelegate" pc="268436433" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\MyServiceDelegate.mc" id="9" lineNum="11" parent="globals/MyServiceDelegate" pc="268436433" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="11" lineNum="17" parent="globals/UVIndexFieldView" pc="268436582" symbol="initialize"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="11" lineNum="18" parent="globals/UVIndexFieldView" pc="268436586" symbol="initialize"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="11" lineNum="19" parent="globals/UVIndexFieldView" pc="268436604" symbol="initialize"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="26" parent="globals/UVIndexFieldView" pc="268436628" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="27" parent="globals/UVIndexFieldView" pc="268436632" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="29" parent="globals/UVIndexFieldView" pc="268436651" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="30" parent="globals/UVIndexFieldView" pc="268436674" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="32" parent="globals/UVIndexFieldView" pc="268436720" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="33" parent="globals/UVIndexFieldView" pc="268436743" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="36" parent="globals/UVIndexFieldView" pc="268436789" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="37" parent="globals/UVIndexFieldView" pc="268436812" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="40" parent="globals/UVIndexFieldView" pc="268436858" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="41" parent="globals/UVIndexFieldView" pc="268436881" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="45" parent="globals/UVIndexFieldView" pc="268436927" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="46" parent="globals/UVIndexFieldView" pc="268436970" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="47" parent="globals/UVIndexFieldView" pc="268436994" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="48" parent="globals/UVIndexFieldView" pc="268437016" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="49" parent="globals/UVIndexFieldView" pc="268437038" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="50" parent="globals/UVIndexFieldView" pc="268437062" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="51" parent="globals/UVIndexFieldView" pc="268437084" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="52" parent="globals/UVIndexFieldView" pc="268437106" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="53" parent="globals/UVIndexFieldView" pc="268437130" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="54" parent="globals/UVIndexFieldView" pc="268437152" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="55" parent="globals/UVIndexFieldView" pc="268437174" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="56" parent="globals/UVIndexFieldView" pc="268437198" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="57" parent="globals/UVIndexFieldView" pc="268437220" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="61" parent="globals/UVIndexFieldView" pc="268437242" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="12" lineNum="62" parent="globals/UVIndexFieldView" pc="268437294" symbol="onLayout"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="13" lineNum="66" parent="globals/UVIndexFieldView" pc="268437347" symbol="compute"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="13" lineNum="68" parent="globals/UVIndexFieldView" pc="268437351" symbol="compute"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="13" lineNum="69" parent="globals/UVIndexFieldView" pc="268437364" symbol="compute"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="13" lineNum="70" parent="globals/UVIndexFieldView" pc="268437383" symbol="compute"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="78" parent="globals/UVIndexFieldView" pc="268437425" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="81" parent="globals/UVIndexFieldView" pc="268437429" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="82" parent="globals/UVIndexFieldView" pc="268437443" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="84" parent="globals/UVIndexFieldView" pc="268437462" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="88" parent="globals/UVIndexFieldView" pc="268437498" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="89" parent="globals/UVIndexFieldView" pc="268437522" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="90" parent="globals/UVIndexFieldView" pc="268437546" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="91" parent="globals/UVIndexFieldView" pc="268437570" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="92" parent="globals/UVIndexFieldView" pc="268437594" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="93" parent="globals/UVIndexFieldView" pc="268437607" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="94" parent="globals/UVIndexFieldView" pc="268437624" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="96" parent="globals/UVIndexFieldView" pc="268437641" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="97" parent="globals/UVIndexFieldView" pc="268437678" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="99" parent="globals/UVIndexFieldView" pc="268437695" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="100" parent="globals/UVIndexFieldView" pc="268437732" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="102" parent="globals/UVIndexFieldView" pc="268437749" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="103" parent="globals/UVIndexFieldView" pc="268437786" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="105" parent="globals/UVIndexFieldView" pc="268437803" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="106" parent="globals/UVIndexFieldView" pc="268437820" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="109" parent="globals/UVIndexFieldView" pc="268437840" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="110" parent="globals/UVIndexFieldView" pc="268437874" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="113" parent="globals/UVIndexFieldView" pc="268437908" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="14" lineNum="116" parent="globals/UVIndexFieldView" pc="268437942" symbol="onUpdate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="15" lineNum="13" parent="globals/UVIndexFieldView" pc="268441258" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldView.mc" id="15" lineNum="13" parent="globals/UVIndexFieldView" pc="268441258" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="17" lineNum="15" parent="globals/UVIndexFieldApp" pc="268435965" symbol="initialize"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="17" lineNum="17" parent="globals/UVIndexFieldApp" pc="268435969" symbol="initialize"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="17" lineNum="19" parent="globals/UVIndexFieldApp" pc="268435987" symbol="initialize"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="17" lineNum="20" parent="globals/UVIndexFieldApp" pc="268436004" symbol="initialize"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="17" lineNum="22" parent="globals/UVIndexFieldApp" pc="268436011" symbol="initialize"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="17" lineNum="23" parent="globals/UVIndexFieldApp" pc="268436032" symbol="initialize"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="17" lineNum="25" parent="globals/UVIndexFieldApp" pc="268436053" symbol="initialize"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="18" lineNum="29" parent="globals/UVIndexFieldApp" pc="268436085" symbol="getServiceDelegate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="18" lineNum="30" parent="globals/UVIndexFieldApp" pc="268436089" symbol="getServiceDelegate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="18" lineNum="31" parent="globals/UVIndexFieldApp" pc="268436099" symbol="getServiceDelegate"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="19" lineNum="36" parent="globals/UVIndexFieldApp" pc="268436141" symbol="onStart"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="20" lineNum="40" parent="globals/UVIndexFieldApp" pc="268436146" symbol="onStop"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="20" lineNum="41" parent="globals/UVIndexFieldApp" pc="268436150" symbol="onStop"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="20" lineNum="42" parent="globals/UVIndexFieldApp" pc="268436162" symbol="onStop"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="20" lineNum="43" parent="globals/UVIndexFieldApp" pc="268436183" symbol="onStop"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="21" lineNum="47" parent="globals/UVIndexFieldApp" pc="268436203" symbol="getUv"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="21" lineNum="48" parent="globals/UVIndexFieldApp" pc="268436207" symbol="getUv"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="22" lineNum="51" parent="globals/UVIndexFieldApp" pc="268436217" symbol="onBackgroundData"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="22" lineNum="52" parent="globals/UVIndexFieldApp" pc="268436221" symbol="onBackgroundData"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="22" lineNum="53" parent="globals/UVIndexFieldApp" pc="268436242" symbol="onBackgroundData"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="22" lineNum="54" parent="globals/UVIndexFieldApp" pc="268436260" symbol="onBackgroundData"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="23" lineNum="58" parent="globals/UVIndexFieldApp" pc="268436271" symbol="getInitialView"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="23" lineNum="59" parent="globals/UVIndexFieldApp" pc="268436275" symbol="getInitialView"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="24" lineNum="63" parent="globals/UVIndexFieldApp" pc="268436313" symbol="getApp"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="24" lineNum="64" parent="globals/UVIndexFieldApp" pc="268436317" symbol="getApp"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="25" lineNum="10" parent="globals/UVIndexFieldApp" pc="268436335" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="25" lineNum="11" parent="globals/UVIndexFieldApp" pc="268436353" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="25" lineNum="13" parent="globals/UVIndexFieldApp" pc="268436393" symbol="&lt;init&gt;"/>
+<entry filename="C:\\Garmin Projects\\UVIndexFieldApp\\source\\UVIndexFieldApp.mc" id="25" lineNum="10" parent="globals/UVIndexFieldApp" pc="268436335" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="27" lineNum="2" parent="globals/Rez/Drawables" pc="268441301" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="28" lineNum="6" parent="globals/Rez/Fonts" pc="268441303" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="29" lineNum="8" parent="globals/Rez/JsonData" pc="268441305" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="30" lineNum="17" parent="globals/Rez/Layouts" pc="268437963" symbol="MainLayout"/>
+<entry filename="Rez" id="30" lineNum="19" parent="globals/Rez/Layouts" pc="268437975" symbol="MainLayout"/>
+<entry filename="Rez" id="30" lineNum="20" parent="globals/Rez/Layouts" pc="268437988" symbol="MainLayout"/>
+<entry filename="Rez" id="30" lineNum="22" parent="globals/Rez/Layouts" pc="268438001" symbol="MainLayout"/>
+<entry filename="Rez" id="30" lineNum="23" parent="globals/Rez/Layouts" pc="268438025" symbol="MainLayout"/>
+<entry filename="Rez" id="30" lineNum="24" parent="globals/Rez/Layouts" pc="268438188" symbol="MainLayout"/>
+<entry filename="Rez" id="30" lineNum="25" parent="globals/Rez/Layouts" pc="268438351" symbol="MainLayout"/>
+<entry filename="Rez" id="30" lineNum="26" parent="globals/Rez/Layouts" pc="268438514" symbol="MainLayout"/>
+<entry filename="Rez" id="30" lineNum="28" parent="globals/Rez/Layouts" pc="268438677" symbol="MainLayout"/>
+<entry filename="Rez" id="31" lineNum="37" parent="globals/Rez/Layouts" pc="268438735" symbol="TopLeftLayout"/>
+<entry filename="Rez" id="31" lineNum="40" parent="globals/Rez/Layouts" pc="268438747" symbol="TopLeftLayout"/>
+<entry filename="Rez" id="31" lineNum="41" parent="globals/Rez/Layouts" pc="268438771" symbol="TopLeftLayout"/>
+<entry filename="Rez" id="31" lineNum="42" parent="globals/Rez/Layouts" pc="268438904" symbol="TopLeftLayout"/>
+<entry filename="Rez" id="31" lineNum="43" parent="globals/Rez/Layouts" pc="268439037" symbol="TopLeftLayout"/>
+<entry filename="Rez" id="31" lineNum="44" parent="globals/Rez/Layouts" pc="268439170" symbol="TopLeftLayout"/>
+<entry filename="Rez" id="31" lineNum="46" parent="globals/Rez/Layouts" pc="268439303" symbol="TopLeftLayout"/>
+<entry filename="Rez" id="32" lineNum="55" parent="globals/Rez/Layouts" pc="268439361" symbol="TopRightLayout"/>
+<entry filename="Rez" id="32" lineNum="58" parent="globals/Rez/Layouts" pc="268439373" symbol="TopRightLayout"/>
+<entry filename="Rez" id="32" lineNum="59" parent="globals/Rez/Layouts" pc="268439397" symbol="TopRightLayout"/>
+<entry filename="Rez" id="32" lineNum="60" parent="globals/Rez/Layouts" pc="268439530" symbol="TopRightLayout"/>
+<entry filename="Rez" id="32" lineNum="61" parent="globals/Rez/Layouts" pc="268439663" symbol="TopRightLayout"/>
+<entry filename="Rez" id="32" lineNum="62" parent="globals/Rez/Layouts" pc="268439796" symbol="TopRightLayout"/>
+<entry filename="Rez" id="32" lineNum="64" parent="globals/Rez/Layouts" pc="268439929" symbol="TopRightLayout"/>
+<entry filename="Rez" id="33" lineNum="73" parent="globals/Rez/Layouts" pc="268439987" symbol="BottomLeftLayout"/>
+<entry filename="Rez" id="33" lineNum="76" parent="globals/Rez/Layouts" pc="268439999" symbol="BottomLeftLayout"/>
+<entry filename="Rez" id="33" lineNum="77" parent="globals/Rez/Layouts" pc="268440023" symbol="BottomLeftLayout"/>
+<entry filename="Rez" id="33" lineNum="78" parent="globals/Rez/Layouts" pc="268440156" symbol="BottomLeftLayout"/>
+<entry filename="Rez" id="33" lineNum="79" parent="globals/Rez/Layouts" pc="268440289" symbol="BottomLeftLayout"/>
+<entry filename="Rez" id="33" lineNum="80" parent="globals/Rez/Layouts" pc="268440422" symbol="BottomLeftLayout"/>
+<entry filename="Rez" id="33" lineNum="82" parent="globals/Rez/Layouts" pc="268440555" symbol="BottomLeftLayout"/>
+<entry filename="Rez" id="34" lineNum="91" parent="globals/Rez/Layouts" pc="268440613" symbol="BottomRightLayout"/>
+<entry filename="Rez" id="34" lineNum="94" parent="globals/Rez/Layouts" pc="268440625" symbol="BottomRightLayout"/>
+<entry filename="Rez" id="34" lineNum="95" parent="globals/Rez/Layouts" pc="268440649" symbol="BottomRightLayout"/>
+<entry filename="Rez" id="34" lineNum="96" parent="globals/Rez/Layouts" pc="268440782" symbol="BottomRightLayout"/>
+<entry filename="Rez" id="34" lineNum="97" parent="globals/Rez/Layouts" pc="268440915" symbol="BottomRightLayout"/>
+<entry filename="Rez" id="34" lineNum="98" parent="globals/Rez/Layouts" pc="268441048" symbol="BottomRightLayout"/>
+<entry filename="Rez" id="34" lineNum="100" parent="globals/Rez/Layouts" pc="268441181" symbol="BottomRightLayout"/>
+<entry filename="Rez" id="35" lineNum="10" parent="globals/Rez/Layouts" pc="268441304" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="36" lineNum="105" parent="globals/Rez/Menus" pc="268441302" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="37" lineNum="107" parent="globals/Rez/Strings" pc="268441306" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="38" lineNum="1" parent="globals/Rez" pc="268441277" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="38" lineNum="1" parent="globals/Rez" pc="268441277" symbol="&lt;init&gt;"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8388639" module="true" symbol="Graphics"/>
@@ -241,66 +243,66 @@
 <entry id="27" method="true" symbol="TopRightLayout"/>
 </symbolTable>
 <localVars>
-<entry endPc="268436454" name="dictionary" stackId="1" startPc="268436394"/>
-<entry arg="true" endPc="268436470" name="color" stackId="1" startPc="268436456"/>
-<entry arg="true" endPc="268436519" name="dc" stackId="1" startPc="268436471"/>
-<entry endPc="268435738" name="options" stackId="2" startPc="268435504"/>
-<entry endPc="268435738" name="myLastLocation" stackId="1" startPc="268435504"/>
-<entry endPc="268435898" name="uviarr" stackId="5" startPc="268435815"/>
-<entry endPc="268435898" name="uvi" stackId="3" startPc="268435815"/>
-<entry endPc="268435898" name="maxuvi" stackId="4" startPc="268435815"/>
-<entry arg="true" endPc="268435902" name="responseCode" stackId="1" startPc="268435740"/>
-<entry arg="true" endPc="268435902" name="data" stackId="2" startPc="268435740"/>
-<entry endPc="268437179" name="valueView2" stackId="6" startPc="268436865"/>
-<entry endPc="268437179" name="valueView" stackId="5" startPc="268436865"/>
-<entry endPc="268437179" name="labelView2" stackId="4" startPc="268436865"/>
-<entry endPc="268437179" name="labelView" stackId="3" startPc="268436865"/>
-<entry endPc="268437283" name="obscurityFlags" stackId="2" startPc="268436570"/>
-<entry arg="true" endPc="268437284" name="dc" stackId="1" startPc="268436566"/>
-<entry endPc="268437358" name="myLocation" stackId="2" startPc="268437302"/>
-<entry arg="true" endPc="268437362" name="info" stackId="1" startPc="268437285"/>
-<entry endPc="268437881" name="maxUValue" stackId="5" startPc="268437367"/>
-<entry endPc="268437881" name="uv" stackId="3" startPc="268437367"/>
-<entry endPc="268437881" name="curUValue" stackId="4" startPc="268437367"/>
-<entry endPc="268437881" name="bgColor" stackId="2" startPc="268437367"/>
-<entry arg="true" endPc="268437882" name="dc" stackId="1" startPc="268437363"/>
-<entry endPc="268435987" name="nextTime" stackId="2" startPc="268435949"/>
-<entry endPc="268436021" name="lastTime" stackId="1" startPc="268435907"/>
-<entry arg="true" endPc="268436083" name="state" stackId="1" startPc="268436079"/>
-<entry arg="true" endPc="268436140" name="state" stackId="1" startPc="268436084"/>
-<entry arg="true" endPc="268436208" name="data" stackId="1" startPc="268436155"/>
-<entry endPc="268438653" name="rez_cmp_local_text_maxUVLabel" stackId="6" startPc="268437895"/>
-<entry endPc="268438653" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268437895"/>
-<entry endPc="268438653" name="rez_cmp_local_custom_drawable_39229705474829124167" stackId="4" startPc="268437895"/>
-<entry endPc="268438653" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268437895"/>
-<entry endPc="268438653" name="rez_cmp_local_text_curUVLabel" stackId="5" startPc="268437895"/>
-<entry endPc="268438653" name="rez_cmp_local_text_maxUVValue" stackId="8" startPc="268437895"/>
-<entry endPc="268438653" name="rez_cmp_local_text_curUVValue" stackId="7" startPc="268437895"/>
-<entry arg="true" endPc="268438654" name="dc" stackId="1" startPc="268437883"/>
-<entry endPc="268439279" name="rez_cmp_local_text_maxUVLabel" stackId="4" startPc="268438667"/>
-<entry endPc="268439279" name="rez_cmp_local_custom_drawable_16892569394992675493" stackId="2" startPc="268438667"/>
-<entry endPc="268439279" name="rez_cmp_local_text_curUVLabel" stackId="3" startPc="268438667"/>
-<entry endPc="268439279" name="rez_cmp_local_text_maxUVValue" stackId="6" startPc="268438667"/>
-<entry endPc="268439279" name="rez_cmp_local_text_curUVValue" stackId="5" startPc="268438667"/>
-<entry arg="true" endPc="268439280" name="dc" stackId="1" startPc="268438655"/>
-<entry endPc="268439905" name="rez_cmp_local_text_maxUVLabel" stackId="4" startPc="268439293"/>
-<entry endPc="268439905" name="rez_cmp_local_custom_drawable_14274114989956980444" stackId="2" startPc="268439293"/>
-<entry endPc="268439905" name="rez_cmp_local_text_curUVLabel" stackId="3" startPc="268439293"/>
-<entry endPc="268439905" name="rez_cmp_local_text_maxUVValue" stackId="6" startPc="268439293"/>
-<entry endPc="268439905" name="rez_cmp_local_text_curUVValue" stackId="5" startPc="268439293"/>
-<entry arg="true" endPc="268439906" name="dc" stackId="1" startPc="268439281"/>
-<entry endPc="268440531" name="rez_cmp_local_text_maxUVLabel" stackId="4" startPc="268439919"/>
-<entry endPc="268440531" name="rez_cmp_local_text_curUVLabel" stackId="3" startPc="268439919"/>
-<entry endPc="268440531" name="rez_cmp_local_text_maxUVValue" stackId="6" startPc="268439919"/>
-<entry endPc="268440531" name="rez_cmp_local_custom_drawable_10328569298183436417" stackId="2" startPc="268439919"/>
-<entry endPc="268440531" name="rez_cmp_local_text_curUVValue" stackId="5" startPc="268439919"/>
-<entry arg="true" endPc="268440532" name="dc" stackId="1" startPc="268439907"/>
-<entry endPc="268441157" name="rez_cmp_local_custom_drawable_16498927431915663064" stackId="2" startPc="268440545"/>
-<entry endPc="268441157" name="rez_cmp_local_text_maxUVLabel" stackId="4" startPc="268440545"/>
-<entry endPc="268441157" name="rez_cmp_local_text_curUVLabel" stackId="3" startPc="268440545"/>
-<entry endPc="268441157" name="rez_cmp_local_text_maxUVValue" stackId="6" startPc="268440545"/>
-<entry endPc="268441157" name="rez_cmp_local_text_curUVValue" stackId="5" startPc="268440545"/>
-<entry arg="true" endPc="268441158" name="dc" stackId="1" startPc="268440533"/>
+<entry endPc="268436516" name="dictionary" stackId="1" startPc="268436456"/>
+<entry arg="true" endPc="268436532" name="color" stackId="1" startPc="268436518"/>
+<entry arg="true" endPc="268436581" name="dc" stackId="1" startPc="268436533"/>
+<entry endPc="268435800" name="options" stackId="2" startPc="268435504"/>
+<entry endPc="268435800" name="myLastLocation" stackId="1" startPc="268435504"/>
+<entry endPc="268435960" name="uviarr" stackId="5" startPc="268435877"/>
+<entry endPc="268435960" name="uvi" stackId="3" startPc="268435877"/>
+<entry endPc="268435960" name="maxuvi" stackId="4" startPc="268435877"/>
+<entry arg="true" endPc="268435964" name="responseCode" stackId="1" startPc="268435802"/>
+<entry arg="true" endPc="268435964" name="data" stackId="2" startPc="268435802"/>
+<entry endPc="268437241" name="valueView2" stackId="6" startPc="268436927"/>
+<entry endPc="268437241" name="valueView" stackId="5" startPc="268436927"/>
+<entry endPc="268437241" name="labelView2" stackId="4" startPc="268436927"/>
+<entry endPc="268437241" name="labelView" stackId="3" startPc="268436927"/>
+<entry endPc="268437345" name="obscurityFlags" stackId="2" startPc="268436632"/>
+<entry arg="true" endPc="268437346" name="dc" stackId="1" startPc="268436628"/>
+<entry endPc="268437420" name="myLocation" stackId="2" startPc="268437364"/>
+<entry arg="true" endPc="268437424" name="info" stackId="1" startPc="268437347"/>
+<entry endPc="268437961" name="maxUValue" stackId="5" startPc="268437429"/>
+<entry endPc="268437961" name="uv" stackId="3" startPc="268437429"/>
+<entry endPc="268437961" name="curUValue" stackId="4" startPc="268437429"/>
+<entry endPc="268437961" name="bgColor" stackId="2" startPc="268437429"/>
+<entry arg="true" endPc="268437962" name="dc" stackId="1" startPc="268437425"/>
+<entry endPc="268436049" name="nextTime" stackId="2" startPc="268436011"/>
+<entry endPc="268436083" name="lastTime" stackId="1" startPc="268435969"/>
+<entry arg="true" endPc="268436145" name="state" stackId="1" startPc="268436141"/>
+<entry arg="true" endPc="268436202" name="state" stackId="1" startPc="268436146"/>
+<entry arg="true" endPc="268436270" name="data" stackId="1" startPc="268436217"/>
+<entry endPc="268438733" name="rez_cmp_local_custom_drawable_18296783619154215781" stackId="4" startPc="268437975"/>
+<entry endPc="268438733" name="rez_cmp_local_text_maxUVLabel" stackId="6" startPc="268437975"/>
+<entry endPc="268438733" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268437975"/>
+<entry endPc="268438733" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268437975"/>
+<entry endPc="268438733" name="rez_cmp_local_text_curUVLabel" stackId="5" startPc="268437975"/>
+<entry endPc="268438733" name="rez_cmp_local_text_maxUVValue" stackId="8" startPc="268437975"/>
+<entry endPc="268438733" name="rez_cmp_local_text_curUVValue" stackId="7" startPc="268437975"/>
+<entry arg="true" endPc="268438734" name="dc" stackId="1" startPc="268437963"/>
+<entry endPc="268439359" name="rez_cmp_local_text_maxUVLabel" stackId="4" startPc="268438747"/>
+<entry endPc="268439359" name="rez_cmp_local_text_curUVLabel" stackId="3" startPc="268438747"/>
+<entry endPc="268439359" name="rez_cmp_local_text_maxUVValue" stackId="6" startPc="268438747"/>
+<entry endPc="268439359" name="rez_cmp_local_custom_drawable_19916419868605232082" stackId="2" startPc="268438747"/>
+<entry endPc="268439359" name="rez_cmp_local_text_curUVValue" stackId="5" startPc="268438747"/>
+<entry arg="true" endPc="268439360" name="dc" stackId="1" startPc="268438735"/>
+<entry endPc="268439985" name="rez_cmp_local_text_maxUVLabel" stackId="4" startPc="268439373"/>
+<entry endPc="268439985" name="rez_cmp_local_text_curUVLabel" stackId="3" startPc="268439373"/>
+<entry endPc="268439985" name="rez_cmp_local_text_maxUVValue" stackId="6" startPc="268439373"/>
+<entry endPc="268439985" name="rez_cmp_local_custom_drawable_12112407271672108614" stackId="2" startPc="268439373"/>
+<entry endPc="268439985" name="rez_cmp_local_text_curUVValue" stackId="5" startPc="268439373"/>
+<entry arg="true" endPc="268439986" name="dc" stackId="1" startPc="268439361"/>
+<entry endPc="268440611" name="rez_cmp_local_text_maxUVLabel" stackId="4" startPc="268439999"/>
+<entry endPc="268440611" name="rez_cmp_local_text_curUVLabel" stackId="3" startPc="268439999"/>
+<entry endPc="268440611" name="rez_cmp_local_text_maxUVValue" stackId="6" startPc="268439999"/>
+<entry endPc="268440611" name="rez_cmp_local_text_curUVValue" stackId="5" startPc="268439999"/>
+<entry endPc="268440611" name="rez_cmp_local_custom_drawable_10564721217490659911" stackId="2" startPc="268439999"/>
+<entry arg="true" endPc="268440612" name="dc" stackId="1" startPc="268439987"/>
+<entry endPc="268441237" name="rez_cmp_local_text_maxUVLabel" stackId="4" startPc="268440625"/>
+<entry endPc="268441237" name="rez_cmp_local_text_curUVLabel" stackId="3" startPc="268440625"/>
+<entry endPc="268441237" name="rez_cmp_local_text_maxUVValue" stackId="6" startPc="268440625"/>
+<entry endPc="268441237" name="rez_cmp_local_custom_drawable_15243168281503003250" stackId="2" startPc="268440625"/>
+<entry endPc="268441237" name="rez_cmp_local_text_curUVValue" stackId="5" startPc="268440625"/>
+<entry arg="true" endPc="268441238" name="dc" stackId="1" startPc="268440613"/>
 </localVars>
 <annotations>
 <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
@@ -312,132 +314,132 @@
 <dataEntry label="globals" offset="87" parentId="" symbolId="globals" type="module"/>
 <dataEntry label="globals/UVIndexFieldApp" offset="166" parentId="globals" symbolId="UVIndexFieldApp" type="class"/>
 <dataEntry label="globals/MyServiceDelegate" offset="293" parentId="globals" symbolId="MyServiceDelegate" type="class"/>
-<dataEntry label="globals/Background" offset="1030" parentId="globals" symbolId="Background" type="class"/>
-<dataEntry label="globals/UVIndexFieldView" offset="1101" parentId="globals" symbolId="UVIndexFieldView" type="class"/>
-<dataEntry label="globals/Rez" offset="1196" parentId="globals" symbolId="Rez" type="module"/>
-<dataEntry label="globals/Rez/Drawables" offset="1275" parentId="Rez" symbolId="Drawables" type="module"/>
-<dataEntry label="globals/Rez/Menus" offset="1314" parentId="Rez" symbolId="Menus" type="module"/>
-<dataEntry label="globals/Rez/Fonts" offset="1345" parentId="Rez" symbolId="Fonts" type="module"/>
-<dataEntry label="globals/Rez/Layouts" offset="1376" parentId="Rez" symbolId="Layouts" type="module"/>
-<dataEntry label="globals/Rez/JsonData" offset="1447" parentId="Rez" symbolId="JsonData" type="module"/>
-<dataEntry label="globals/Rez/Strings" offset="1478" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry label="globals/Background" offset="1027" parentId="globals" symbolId="Background" type="class"/>
+<dataEntry label="globals/UVIndexFieldView" offset="1098" parentId="globals" symbolId="UVIndexFieldView" type="class"/>
+<dataEntry label="globals/Rez" offset="1193" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/Rez/Drawables" offset="1272" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Menus" offset="1311" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry label="globals/Rez/Fonts" offset="1342" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="1373" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/JsonData" offset="1444" parentId="Rez" symbolId="JsonData" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="1475" parentId="Rez" symbolId="Strings" type="module"/>
 </dataEntryOffsetMappings>
 <functions>
-<functionEntry accessMode="public" endPc="268436455" name="initialize" parent="Background" startPc="268436390">
+<functionEntry accessMode="public" endPc="268436517" name="initialize" parent="Background" startPc="268436452">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436470" name="setColor" parent="Background" startPc="268436456">
+<functionEntry accessMode="public" endPc="268436532" name="setColor" parent="Background" startPc="268436518">
 <param id="color"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436519" name="draw" parent="Background" startPc="268436471">
+<functionEntry accessMode="public" endPc="268436581" name="draw" parent="Background" startPc="268436533">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268441177" name="&lt;init&gt;" parent="Background" startPc="268441159">
+<functionEntry accessMode="protected" endPc="268441257" name="&lt;init&gt;" parent="Background" startPc="268441239">
 <documentation/>
 </functionEntry>
 <functionEntry accessMode="public" endPc="268435499" name="initialize" parent="MyServiceDelegate" startPc="268435456">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268435739" name="onTemporalEvent" parent="MyServiceDelegate" startPc="268435500">
+<functionEntry accessMode="public" endPc="268435801" name="onTemporalEvent" parent="MyServiceDelegate" startPc="268435500">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268435902" name="responseCallback" parent="MyServiceDelegate" startPc="268435740">
+<functionEntry accessMode="public" endPc="268435964" name="responseCallback" parent="MyServiceDelegate" startPc="268435802">
 <param id="responseCode"/>
 <param id="data"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268436389" name="&lt;init&gt;" parent="MyServiceDelegate" startPc="268436371">
+<functionEntry accessMode="protected" endPc="268436451" name="&lt;init&gt;" parent="MyServiceDelegate" startPc="268436433">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436565" name="initialize" parent="UVIndexFieldView" startPc="268436520">
+<functionEntry accessMode="public" endPc="268436627" name="initialize" parent="UVIndexFieldView" startPc="268436582">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268437284" name="onLayout" parent="UVIndexFieldView" startPc="268436566">
+<functionEntry accessMode="public" endPc="268437346" name="onLayout" parent="UVIndexFieldView" startPc="268436628">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268437362" name="compute" parent="UVIndexFieldView" startPc="268437285">
+<functionEntry accessMode="public" endPc="268437424" name="compute" parent="UVIndexFieldView" startPc="268437347">
 <param id="info"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268437882" name="onUpdate" parent="UVIndexFieldView" startPc="268437363">
+<functionEntry accessMode="public" endPc="268437962" name="onUpdate" parent="UVIndexFieldView" startPc="268437425">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268441196" name="&lt;init&gt;" parent="UVIndexFieldView" startPc="268441178">
+<functionEntry accessMode="protected" endPc="268441276" name="&lt;init&gt;" parent="UVIndexFieldView" startPc="268441258">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436022" name="initialize" parent="UVIndexFieldApp" startPc="268435903">
+<functionEntry accessMode="public" endPc="268436084" name="initialize" parent="UVIndexFieldApp" startPc="268435965">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436078" name="getServiceDelegate" parent="UVIndexFieldApp" startPc="268436023">
+<functionEntry accessMode="public" endPc="268436140" name="getServiceDelegate" parent="UVIndexFieldApp" startPc="268436085">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436083" name="onStart" parent="UVIndexFieldApp" startPc="268436079">
+<functionEntry accessMode="public" endPc="268436145" name="onStart" parent="UVIndexFieldApp" startPc="268436141">
 <param id="state"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436140" name="onStop" parent="UVIndexFieldApp" startPc="268436084">
+<functionEntry accessMode="public" endPc="268436202" name="onStop" parent="UVIndexFieldApp" startPc="268436146">
 <param id="state"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436154" name="getUv" parent="UVIndexFieldApp" startPc="268436141">
+<functionEntry accessMode="public" endPc="268436216" name="getUv" parent="UVIndexFieldApp" startPc="268436203">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436208" name="onBackgroundData" parent="UVIndexFieldApp" startPc="268436155">
+<functionEntry accessMode="public" endPc="268436270" name="onBackgroundData" parent="UVIndexFieldApp" startPc="268436217">
 <param id="data"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436250" name="getInitialView" parent="UVIndexFieldApp" startPc="268436209">
+<functionEntry accessMode="public" endPc="268436312" name="getInitialView" parent="UVIndexFieldApp" startPc="268436271">
 <documentation><![CDATA[<div class="description"> Return the initial view of your application here<br/></div>]]></documentation>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436271" name="getApp" parent="UVIndexFieldApp" startPc="268436251">
+<functionEntry accessMode="public" endPc="268436333" name="getApp" parent="UVIndexFieldApp" startPc="268436313">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268436370" name="&lt;init&gt;" parent="UVIndexFieldApp" startPc="268436273">
+<functionEntry accessMode="protected" endPc="268436432" name="&lt;init&gt;" parent="UVIndexFieldApp" startPc="268436335">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268441221" name="&lt;init&gt;" parent="Drawables" startPc="268441221">
+<functionEntry accessMode="protected" endPc="268441301" name="&lt;init&gt;" parent="Drawables" startPc="268441301">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268441223" name="&lt;init&gt;" parent="Fonts" startPc="268441223">
+<functionEntry accessMode="protected" endPc="268441303" name="&lt;init&gt;" parent="Fonts" startPc="268441303">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268441225" name="&lt;init&gt;" parent="JsonData" startPc="268441225">
+<functionEntry accessMode="protected" endPc="268441305" name="&lt;init&gt;" parent="JsonData" startPc="268441305">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268438654" name="MainLayout" parent="Layouts" startPc="268437883">
+<functionEntry accessMode="public" endPc="268438734" name="MainLayout" parent="Layouts" startPc="268437963">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268439280" name="TopLeftLayout" parent="Layouts" startPc="268438655">
+<functionEntry accessMode="public" endPc="268439360" name="TopLeftLayout" parent="Layouts" startPc="268438735">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268439906" name="TopRightLayout" parent="Layouts" startPc="268439281">
+<functionEntry accessMode="public" endPc="268439986" name="TopRightLayout" parent="Layouts" startPc="268439361">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268440532" name="BottomLeftLayout" parent="Layouts" startPc="268439907">
+<functionEntry accessMode="public" endPc="268440612" name="BottomLeftLayout" parent="Layouts" startPc="268439987">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268441158" name="BottomRightLayout" parent="Layouts" startPc="268440533">
+<functionEntry accessMode="public" endPc="268441238" name="BottomRightLayout" parent="Layouts" startPc="268440613">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268441224" name="&lt;init&gt;" parent="Layouts" startPc="268441224">
+<functionEntry accessMode="protected" endPc="268441304" name="&lt;init&gt;" parent="Layouts" startPc="268441304">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268441222" name="&lt;init&gt;" parent="Menus" startPc="268441222">
+<functionEntry accessMode="protected" endPc="268441302" name="&lt;init&gt;" parent="Menus" startPc="268441302">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268441226" name="&lt;init&gt;" parent="Strings" startPc="268441226">
+<functionEntry accessMode="protected" endPc="268441306" name="&lt;init&gt;" parent="Strings" startPc="268441306">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268441220" name="&lt;init&gt;" parent="Rez" startPc="268441197">
+<functionEntry accessMode="protected" endPc="268441300" name="&lt;init&gt;" parent="Rez" startPc="268441277">
 <documentation/>
 </functionEntry>
 </functions>
