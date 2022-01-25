@@ -17,8 +17,7 @@ class UVIndexFieldView extends WatchUi.DataField {
     function initialize() {
         DataField.initialize();
         uvIndexFieldApp = Application.getApp();
-
-        }
+    }
         
 
     // Set your layout here. Anytime the size of obscurity of
@@ -49,6 +48,9 @@ class UVIndexFieldView extends WatchUi.DataField {
             var labelView2 = View.findDrawableById("maxUVLabel");
             labelView2.locY = labelView2.locY - 16;
             labelView2.locX = labelView2.locX + 25;
+            var valueView3 = View.findDrawableById("uvTag");
+            valueView3.locY = valueView3.locY + 7;
+            valueView3.locX = valueView3.locX + 0;
             var valueView = View.findDrawableById("curUVValue");
             valueView.locY = valueView.locY + 7;
             valueView.locX = valueView.locX - 28;
@@ -56,10 +58,12 @@ class UVIndexFieldView extends WatchUi.DataField {
             valueView2.locY = valueView2.locY + 7;
             valueView2.locX = valueView2.locX + 27;
 
+
         }
 
         (View.findDrawableById("curUVLabel") as Text).setText(Rez.Strings.curUVLabel);
         (View.findDrawableById("maxUVLabel") as Text).setText(Rez.Strings.maxUVLabel);
+        (View.findDrawableById("uvTag") as Text).setText(Rez.Strings.uvTag);
 
     }
 
@@ -68,25 +72,20 @@ class UVIndexFieldView extends WatchUi.DataField {
         if (info.currentLocation != null) {
         var myLocation = info.currentLocation.toDegrees();
         Storage.setValue("location", info.currentLocation.toDegrees());
-       // System.println("Latitude: " + myLocation[0]); // e.g. 38.856147
-        //System.println("Longitude: " + myLocation[1]); // e.g -94.800953
-    }
+        }
     }
   
     // Display the value you computed here. This will be called
     // once a second when the data field is visible.
     function onUpdate(dc as Dc) as Void {
 
-        // Set the background color 
         var bgColor = Graphics.COLOR_WHITE;
         var uv = uvIndexFieldApp.getUv();
-        //(View.findDrawableById("Background") as Text).setColor(getBackgroundColor());
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
-
-
-        // Set the foreground color and value
         var curUValue = View.findDrawableById("curUVValue") as Text;
         var maxUValue = View.findDrawableById("maxUVValue") as Text;
+
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
+
         curUValue.setColor(Graphics.COLOR_BLACK);
         maxUValue.setColor(Graphics.COLOR_BLACK);
         if (uv[0] !=null) {

@@ -17,8 +17,6 @@ class MyServiceDelegate extends System.ServiceDelegate {
     function initialize() {
     	System.println("init service delegate");
         ServiceDelegate.initialize(); 
-
-        
     }    
 
   function onTemporalEvent() as Void{
@@ -56,8 +54,7 @@ class MyServiceDelegate extends System.ServiceDelegate {
         // process.
         System.println( data["daily"][0]["uvi"] ); 
         System.println("response code "+responseCode);
-        //System.println("recieved data: "+data);
-         if (responseCode == 200) {
+        if (responseCode == 200) {
          /*var uvi = data.get("result").get("uv");
          var maxuv = data.get("result").get("uv_max");
          var uvtime = data.get("result").get("uv_max_time");
@@ -69,6 +66,6 @@ class MyServiceDelegate extends System.ServiceDelegate {
          var maxuvi =  data["daily"][0]["uvi"];
          var uviarr = [uvi,maxuvi];
          Background.exit(uviarr);
-         }
+        }
     }
 }
