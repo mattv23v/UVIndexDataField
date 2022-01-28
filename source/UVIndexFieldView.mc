@@ -14,58 +14,20 @@ class UVIndexFieldView extends WatchUi.DataField {
 	hidden var uvIndexFieldApp as UVIndexFieldApp;
     private var _message as String = "Press menu or\nselect button";
 	private var cond;
+    private var screenShape;
     function initialize() {
         DataField.initialize();
         uvIndexFieldApp = Application.getApp();
-    }
-        
-
-    // Set your layout here. Anytime the size of obscurity of
-    // the draw context is changed this will be called.
-    function onLayout(dc as Dc) as Void {
-        var obscurityFlags = DataField.getObscurityFlags();
-        // Top left quadrant so we'll use the top left layout
-        if (obscurityFlags == (OBSCURE_TOP | OBSCURE_LEFT)) {
-            View.setLayout(Rez.Layouts.TopLeftLayout(dc));
-        // Top right quadrant so we'll use the top right layout
-        } else if (obscurityFlags == (OBSCURE_TOP | OBSCURE_RIGHT)) {
-            View.setLayout(Rez.Layouts.TopRightLayout(dc));
-
-        // Bottom left quadrant so we'll use the bottom left layout
-        } else if (obscurityFlags == (OBSCURE_BOTTOM | OBSCURE_LEFT)) {
-            View.setLayout(Rez.Layouts.BottomLeftLayout(dc));
-
-        // Bottom right quadrant so we'll use the bottom right layout
-        } else if (obscurityFlags == (OBSCURE_BOTTOM | OBSCURE_RIGHT)) {
-            View.setLayout(Rez.Layouts.BottomRightLayout(dc));
-
-        // Use the generic, centered layout
-        } else {
-            View.setLayout(Rez.Layouts.MainLayout(dc));
-            var labelView = View.findDrawableById("curUVLabel");
-            labelView.locY = labelView.locY - 16;
-            labelView.locX = labelView.locX - 20;
-            var labelView2 = View.findDrawableById("maxUVLabel");
-            labelView2.locY = labelView2.locY - 16;
-            labelView2.locX = labelView2.locX + 25;
-            var valueView3 = View.findDrawableById("uvTag");
-            valueView3.locY = valueView3.locY + 7;
-            valueView3.locX = valueView3.locX + 0;
-            var valueView = View.findDrawableById("curUVValue");
-            valueView.locY = valueView.locY + 7;
-            valueView.locX = valueView.locX - 28;
-            var valueView2 = View.findDrawableById("maxUVValue");
-            valueView2.locY = valueView2.locY + 7;
-            valueView2.locX = valueView2.locX + 27;
-
-
-        }
-
-        (View.findDrawableById("curUVLabel") as Text).setText(Rez.Strings.curUVLabel);
-        (View.findDrawableById("maxUVLabel") as Text).setText(Rez.Strings.maxUVLabel);
-        (View.findDrawableById("uvTag") as Text).setText(Rez.Strings.uvTag);
+        screenShape = System.getDeviceSettings().screenShape;
+        System.println(screenShape);
+        /*
+        SCREEN_SHAPE_ROUND	1	
+        SCREEN_SHAPE_SEMI_ROUND	2	
+        SCREEN_SHAPE_RECTANGLE	3	
+        */
 
     }
+
 
     function compute(info) {
         //need to simulate location
@@ -74,21 +36,28 @@ class UVIndexFieldView extends WatchUi.DataField {
         Storage.setValue("location", info.currentLocation.toDegrees());
         }
     }
-  
+
+    function isSingleFieldLayout() {
+        return (DataField.getObscurityFlags() == OBSCURE_TOP | OBSCURE_LEFT | OBSCURE_BOTTOM | OBSCURE_RIGHT);
+    }
+
     // Display the value you computed here. This will be called
     // once a second when the data field is visible.
     function onUpdate(dc as Dc) as Void {
-
+        var currentLabel = "Current";
+        var maxLabel = "Max";
+        var uvLabel = "UV";
+        var valueFormat = 0.2f;
+        var width = dc.getWidth();
+        var height = dc.getHeight();
+        var textCenter = Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
         var bgColor = Graphics.COLOR_WHITE;
+
         var uv = uvIndexFieldApp.getUv();
-        var curUValue = View.findDrawableById("curUVValue") as Text;
-        var maxUValue = View.findDrawableById("maxUVValue") as Text;
+        var uvCur = uv[0].format("%.2f");
+        var uvMax = uv[1].format("%.2f");
 
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
-
-        curUValue.setColor(Graphics.COLOR_BLACK);
-        maxUValue.setColor(Graphics.COLOR_BLACK);
-        if (uv[0] !=null) {
+        if (uv[0] != null) {
             if (uv[0]<=2.99) {
                 bgColor = Graphics.COLOR_GREEN;
             }
@@ -105,14 +74,77 @@ class UVIndexFieldView extends WatchUi.DataField {
                 bgColor = Graphics.COLOR_PURPLE;
             }
         }
-        curUValue.setText(uv[0].format("%.2f"));
-        maxUValue.setText(uv[1].format("%.2f"));
+        dc.setColor(Graphics.COLOR_TRANSPARENT, bgColor);
+        dc.clear();
+        //dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        //dc.fillRectangle (0, 0, width, height);
+        //dc.setColor((backgroundColor == Graphics.COLOR_WHITE) ? Graphics.COLOR_WHITE : Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        System.println(uvCur);
+        System.println("get width: "+width);
+        System.println("shape: "+screenShape);
+        if (screenShape == 3) {
+            dc.drawText(width / 2-18, 5 + (height - 35) / 2, Graphics.FONT_TINY, currentLabel, textCenter);
+            dc.drawText(width / 2+26, 5 + (height - 35) / 2, Graphics.FONT_TINY, maxLabel, textCenter);
+            dc.drawText(width / 2+1, height / 2 + 4, Graphics.FONT_XTINY, uvLabel, textCenter);
+            dc.drawText(width / 2-27, height / 2 + 4, Graphics.FONT_TINY, uvCur, textCenter);
+            dc.drawText(width / 2+28, height / 2 + 4, Graphics.FONT_TINY, uvMax, textCenter);
+        }
+        if (isSingleFieldLayout() and !(width == 390)) {
+            dc.drawText(width / 2-40, height / 2 - 40, Graphics.FONT_LARGE, currentLabel, textCenter);
+            dc.drawText(width / 2+55, height / 2 - 40, Graphics.FONT_LARGE, maxLabel, textCenter);
+            dc.drawText(width / 2+1, height / 2 + 4, Graphics.FONT_XTINY, uvLabel, textCenter);
+            dc.drawText(width / 2-58, height / 2 + 7, Graphics.FONT_LARGE, uvCur, textCenter);
+            dc.drawText(width / 2+57, height / 2 + 7, Graphics.FONT_LARGE, uvMax, textCenter);
+         } 
+        //do layout 390 x 390	
+        if (isSingleFieldLayout() and (width == 390)) {
+            dc.drawText(width / 2-60, height / 2 - 40, Graphics.FONT_LARGE, currentLabel, textCenter);
+            dc.drawText(width / 2+85, height / 2 - 40, Graphics.FONT_LARGE, maxLabel, textCenter);
+            dc.drawText(width / 2+1, height / 2 + 4, Graphics.FONT_XTINY, uvLabel, textCenter);
+            dc.drawText(width / 2-87, height / 2 + 7, Graphics.FONT_LARGE, uvCur, textCenter);
+            dc.drawText(width / 2+88, height / 2 + 7, Graphics.FONT_LARGE, uvMax, textCenter);
+         } 
+        if (!isSingleFieldLayout() and (width == 390 or width == 194)) {
+            dc.drawText(width / 2-30, 5 + (height - 35) / 2, Graphics.FONT_XTINY, currentLabel, textCenter);
+            dc.drawText(width / 2+40, 5 + (height - 35) / 2, Graphics.FONT_XTINY, maxLabel, textCenter);
+            dc.drawText(width / 2-2, height / 2 + 14, Graphics.FONT_XTINY, uvLabel, textCenter);
+            dc.drawText(width / 2-45, height / 2 + 14, Graphics.FONT_XTINY, uvCur, textCenter);
+            dc.drawText(width / 2+42, height / 2 + 14, Graphics.FONT_XTINY, uvMax, textCenter);
+        
+        }
+        //do layout 260 x 260, 280 x 280, 218 x 218		
+       if (!isSingleFieldLayout() and (width == 240 or width == 280 or width == 119 
+           or width == 129 or width == 260 or width == 218 or width == 108or width == 139)) {
+            dc.drawText(width / 2-14, 5 + (height - 35) / 2, Graphics.FONT_XTINY, currentLabel, textCenter);
+            dc.drawText(width / 2+30, 5 + (height - 35) / 2, Graphics.FONT_XTINY, maxLabel, textCenter);
+            dc.drawText(width / 2+6, height / 2 + 4, Graphics.FONT_XTINY, uvLabel, textCenter);
+            dc.drawText(width / 2-24, height / 2 + 4, Graphics.FONT_XTINY, uvCur, textCenter);
+            dc.drawText(width / 2+32, height / 2 + 4, Graphics.FONT_XTINY, uvMax, textCenter);
+        }
+        
+   // dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+   
 
 
-        View.findDrawableById("Background").setColor(bgColor);
+        //var bgColor = Graphics.COLOR_WHITE;
+      //  var uv = uvIndexFieldApp.getUv();
+        //var curUValue = View.findDrawableById("curUVValue") as Text;
+        //var maxUValue = View.findDrawableById("maxUVValue") as Text;
 
+        //dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
+
+
+        //curUValue.setColor(Graphics.COLOR_BLACK);
+       // maxUValue.setColor(Graphics.COLOR_BLACK);
+
+       // curUValue.setText(uv[0].format("%.2f"));
+        //maxUValue.setText(uv[1].format("%.2f"));
+
+        //View.findDrawableById("Background").setColor(bgColor);
+     
         // Call parent's onUpdate(dc) to redraw the layout
-        View.onUpdate(dc);
+        //View.onUpdate(dc);
     }
      
 }

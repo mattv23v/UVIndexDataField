@@ -37,10 +37,7 @@ class MyServiceDelegate extends System.ServiceDelegate {
         };
 
        Communications.makeWebRequest(
-            //"https://api.openweathermap.org/data/2.5/onecall?lat=35.78&lon=-78.64&exclude=alerts,minutely,hourly,daily&appid=2ca5acab977c95097e264298dd95ec77",
-            //"https://api.openweathermap.org/data/2.5/weather?q=Raleigh&appid=2ca5acab977c95097e264298dd95ec77",
             //"https://api.openuv.io/api/v1/uv?lat=36.34&lng=-78.342T10%3A50%3A52.283Z",
-            //"https://api.openweathermap.org/data/2.5/onecall?lat=35.78&lon=-78.64&exclude=alerts,minutely,hourly&appid=2ca5acab977c95097e264298dd95ec77",
             "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+long+"&exclude=alerts,minutely,hourly&appid=2ca5acab977c95097e264298dd95ec77",
             {},
             options,
