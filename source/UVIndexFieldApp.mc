@@ -13,22 +13,21 @@ private var inBackground = false;
 const FIVE_MINUTES = new Time.Duration(5 * 60);
 
     public function initialize() {
-    
         AppBase.initialize();
-
-        var lastTime = Background.getLastTemporalEventTime();
+        System.println("initialize app");
+      /*  var lastTime = Background.getLastTemporalEventTime();
         if (lastTime != null) {
             // Events scheduled for a time in the past trigger immediately
             var nextTime = lastTime.add(FIVE_MINUTES);
             Background.registerForTemporalEvent(nextTime);
         } else {
             Background.registerForTemporalEvent(Time.now());
-        }
+        }*/
     }
  
     public function getServiceDelegate() as ServiceDelegate{
-       inBackground=true;     
-       return [new $.MyServiceDelegate()] as Array<ServiceDelegate>;
+        inBackground=true;     
+        return [new $.MyServiceDelegate()] as Array<ServiceDelegate>;
        
     }
 

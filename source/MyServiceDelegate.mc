@@ -9,25 +9,23 @@ import Toybox.Application.Storage;
 
 (:background)
 class MyServiceDelegate extends System.ServiceDelegate {
-    // When a scheduled background event triggers, make a request to
-    // a service and handle the response with a callback function
-    // within this delegate.
-    private var long;
-    private var lat;
+private var long;
+private var lat;
+
     function initialize() {
     	System.println("init service delegate");
         ServiceDelegate.initialize(); 
     }    
 
-  function onTemporalEvent() as Void{
-    System.println("temporal event");
-    var myLastLocation = Application.Storage.getValue("location");
-    lat = myLastLocation[0];
-    long = myLastLocation[1];
-    System.println("Latitude: " + lat); 
-    System.println("Longitude: " + long); 
-
-      var options = {
+    function onTemporalEvent() as Void {
+        System.println("temporal event");
+        var myLastLocation = Application.Storage.getValue("location");
+        lat = myLastLocation[0];
+        long = myLastLocation[1];
+        System.println("Latitude: " + lat); 
+        System.println("Longitude: " + long); 
+        
+        var options = {
             :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
             :headers => {
                 "Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED,
@@ -35,10 +33,12 @@ class MyServiceDelegate extends System.ServiceDelegate {
                 
             }
         };
+        
+       System.println("https://api.openuv.io/api/v1/uv?lat="+lat+"&lng="+long+"T10%3A50%3A52.283Z");
 
        Communications.makeWebRequest(
-            //"https://api.openuv.io/api/v1/uv?lat=36.34&lng=-78.342T10%3A50%3A52.283Z",
-            "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+long+"&exclude=alerts,minutely,hourly&appid=2ca5acab977c95097e264298dd95ec77",
+             "https://api.openuv.io/api/v1/uv?lat="+lat+"&lng="+long+"T10%3A50%3A52.283Z",
+            // "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+long+"&exclude=alerts,minutely,hourly&appid=2ca5acab977c95097e264298dd95ec77",
             {},
             options,
             method(:responseCallback)
@@ -49,20 +49,17 @@ class MyServiceDelegate extends System.ServiceDelegate {
         // Do stuff with the response data here and send the data
         // payload back to the app that originated the background
         // process.
-        System.println( data["daily"][0]["uvi"] ); 
+        //System.println( data["daily"][0]["uvi"] ); 
         System.println("response code "+responseCode);
         if (responseCode == 200) {
-         /*var uvi = data.get("result").get("uv");
-         var maxuv = data.get("result").get("uv_max");
-         var uvtime = data.get("result").get("uv_max_time");
-         System.println("cur uvi: "+uvi);
-         System.println("max uvi: "+maxuv);
-         System.println("max uvi time: "+uvtime);*/
-         //var uvi = data.get("current").get("uvi");
-         var uvi = data["current"]["uvi"];
-         var maxuvi =  data["daily"][0]["uvi"];
-         var uviarr = [uvi,maxuvi];
-         Background.exit(uviarr);
+            var uvi = data.get("result").get("uv");
+            var maxuvi = data.get("result").get("uv_max");
+            //System.println("cur uvi: "+uvi);
+            //System.println("max uvi: "+maxuvi);
+            //var uvi = data["current"]["uvi"];
+            //var maxuvi =  data["daily"][0]["uvi"];
+            var uviarr = [uvi,maxuvi];
+            Background.exit(uviarr);
         }
     }
 }

@@ -1,6 +1,6 @@
 <strings>
-    <string id="AppName">HourlyWeather</string>
+    <string id="AppName">UVIndexFieldApp</string>
     <string id="curUVLabel">Current</string>
     <string id="maxUVLabel">Max</string>
-     <string id="uvTag">UV</string>
+    <string id="uvTag">UV</string>
 </strings>
