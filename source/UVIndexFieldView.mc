@@ -8,6 +8,7 @@ import Toybox.System;
 import Toybox.Application;
 import Toybox.Weather;
 import Toybox.Application.Storage;
+import Toybox.Time.Gregorian;
 
 
 class UVIndexFieldView extends WatchUi.DataField {
@@ -15,6 +16,9 @@ hidden var uvIndexFieldApp as UVIndexFieldApp;
 private var _message as String = "Press menu or\nselect button";
 private var screenShape;
 private var registered = false;
+const FIVE_MINUTES = new Time.Duration(5 * 60);
+const SIXTY_MINUTES = new Time.Duration(60 * 60);
+const THIRTY_MINUTES = new Time.Duration(30 * 60);
 
     function initialize() {
         DataField.initialize();
@@ -26,27 +30,26 @@ private var registered = false;
         SCREEN_SHAPE_SEMI_ROUND	2	
         SCREEN_SHAPE_RECTANGLE	3	
         */
-
     }
-
 
     function compute(info) {
         //need to simulate location
         if (info.currentLocation != null) {
-        var myLocation = info.currentLocation.toDegrees();
-        Storage.setValue("location", info.currentLocation.toDegrees());
+            var myLocation = info.currentLocation.toDegrees();
+            Storage.setValue("location", info.currentLocation.toDegrees());
         }
 
-       // var isBTConnected= System.getDeviceSettings().phoneConnected;
-        var isConnected= System.getDeviceSettings().connectionAvailable;
-        System.println("internet connection: "+isConnected);
+  		var now = Time.now();
+        var lastTime = Background.getLastTemporalEventTime();
+        var isBTConnected= System.getDeviceSettings().phoneConnected;
 
-
-        if(Toybox.System has :ServiceDelegate && isConnected && !registered) {
-            Background.registerForTemporalEvent(new Time.Duration(5 * 60));
-            System.println("Registered temp event");
-            registered = true;
-        } 
+        if ((isBTConnected and info.currentLocation != null and 
+             now.greaterThan(lastTime.add(THIRTY_MINUTES))) or 
+             (isBTConnected and lastTime == null and info.currentLocation != null)) {
+            System.println("register event in view"); 
+            Background.registerForTemporalEvent(Time.now()); 
+        }
+        
     
     }    
 
@@ -65,7 +68,6 @@ private var registered = false;
         var height = dc.getHeight();
         var textCenter = Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
         var bgColor = Graphics.COLOR_WHITE;
-
         var uv = uvIndexFieldApp.getUv();
         var uvCur = uv[0].format("%.2f");
         var uvMax = uv[1].format("%.2f");
@@ -87,21 +89,9 @@ private var registered = false;
                 bgColor = Graphics.COLOR_PURPLE;
             }
         }
-        if (uv[1] == 0.00) {
-            currentLabel = "Loading..";
-            maxLabel = "";
-            uvCur = "";
-            uvMax = "";
-            uvLabel = "";
-        }
         dc.setColor(Graphics.COLOR_TRANSPARENT, bgColor);
         dc.clear();
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-       // System.println(uvCur);
-       // System.println("get width: "+width);
-        //System.println("get height: "+height);
-
-       // System.println("shape: "+screenShape);
        // do layout square bike computers
         if (screenShape == 3 and !(width == 282 or width == 140)) {
             dc.drawText(width / 2-22, 5 + (height - 35) / 2, Graphics.FONT_SMALL, currentLabel, textCenter);
@@ -116,9 +106,7 @@ private var registered = false;
             dc.drawText(width / 2-2, height / 2 + 8, Graphics.FONT_XTINY, uvLabel, textCenter);
             dc.drawText(width / 2-37, height / 2 + 8, Graphics.FONT_SMALL, uvCur, textCenter);
             dc.drawText(width / 2+35, height / 2 + 8, Graphics.FONT_SMALL, uvMax, textCenter);
-            }
-        
-     
+        }
         //do layout 390 x 390	
         if (isSingleFieldLayout() and (width == 390)) {
             dc.drawText(width / 2-60, height / 2 - 40, Graphics.FONT_LARGE, currentLabel, textCenter);
