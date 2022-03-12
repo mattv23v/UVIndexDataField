@@ -13,12 +13,8 @@ import Toybox.Time.Gregorian;
 
 class UVIndexFieldView extends WatchUi.DataField {
 hidden var uvIndexFieldApp as UVIndexFieldApp;
-private var _message as String = "Press menu or\nselect button";
 private var screenShape;
-private var registered = false;
-const FIVE_MINUTES = new Time.Duration(5 * 60);
-const SIXTY_MINUTES = new Time.Duration(60 * 60);
-const THIRTY_MINUTES = new Time.Duration(30 * 60);
+private var myLocation = null;
 
     function initialize() {
         DataField.initialize();
@@ -35,22 +31,9 @@ const THIRTY_MINUTES = new Time.Duration(30 * 60);
     function compute(info) {
         //need to simulate location
         if (info.currentLocation != null) {
-            var myLocation = info.currentLocation.toDegrees();
+            myLocation = info.currentLocation.toDegrees();
             Storage.setValue("location", info.currentLocation.toDegrees());
-        }
-
-  		var now = Time.now();
-        var lastTime = Background.getLastTemporalEventTime();
-        var isBTConnected= System.getDeviceSettings().phoneConnected;
-
-        if ((isBTConnected and info.currentLocation != null and 
-             now.greaterThan(lastTime.add(THIRTY_MINUTES))) or 
-             (isBTConnected and lastTime == null and info.currentLocation != null)) {
-            System.println("register event in view"); 
-            Background.registerForTemporalEvent(Time.now()); 
-        }
-        
-    
+        }      
     }    
 
     function isSingleFieldLayout() {
@@ -60,6 +43,11 @@ const THIRTY_MINUTES = new Time.Duration(30 * 60);
     // Display the value you computed here. This will be called
     // once a second when the data field is visible.
     function onUpdate(dc as Dc) as Void {
+       var isBTConnected = System.getDeviceSettings().phoneConnected;
+	   if (isBTConnected and myLocation !=null) {
+            uvIndexFieldApp.registerEvent();    
+       }
+
         var currentLabel = "Current";
         var maxLabel = "Max";
         var uvLabel = "UV";

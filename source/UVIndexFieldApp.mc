@@ -11,24 +11,16 @@ import Toybox.Time.Gregorian;
 class UVIndexFieldApp extends Application.AppBase {
 private var uv = [0,0];
 private var inBackground = false;
-const FIVE_MINUTES = new Time.Duration(5 * 60);
-const THIRTY_MINUTES = new Time.Duration(30 * 60);
 
     public function initialize() {
         AppBase.initialize();
-        System.println("initialize app");   
-        var now = Time.now();
-        var lastTime = Background.getLastTemporalEventTime();
-        var isBTConnected= System.getDeviceSettings().phoneConnected;
-        var curLoc = Activity.getActivityInfo().currentLocation;
+        System.println("initialize app"); 
+        var savedUV = Application.Storage.getValue("lastuv");
+        System.println("saved UV "+savedUV); 
+        if (savedUV != null) {
+            uv = savedUV;
+        }
 
-
-        if ((isBTConnected and curLoc != null and 
-             now.greaterThan(lastTime.add(THIRTY_MINUTES))) or  
-             (isBTConnected and lastTime == null and curLoc != null)) {
-            System.println("register event in initialize");   
-            Background.registerForTemporalEvent(Time.now()); 
-        }   
     }
  
     public function getServiceDelegate() as ServiceDelegate{
@@ -56,6 +48,8 @@ const THIRTY_MINUTES = new Time.Duration(30 * 60);
         System.println("callback");
         System.println(data);
         uv = data;
+        Storage.setValue("lastuv", uv);
+
     }
 
     //! Return the initial view of your application here
@@ -65,6 +59,17 @@ const THIRTY_MINUTES = new Time.Duration(30 * 60);
     
     function getApp() as UVIndexFieldApp {
         return Application.getApp() as UVIndexFieldApp;
+    }
+
+    function registerEvent() {
+        var lastTime = Background.getLastTemporalEventTime();
+        var now = Time.now();
+        //System.println("now "+now.value());
+        //System.println("last time "+lastTime.value());
+        if (lastTime == null or (now.value() > (lastTime.value()+900))) {
+            Background.registerForTemporalEvent(Time.now());
+        }
+
     }
 
 }

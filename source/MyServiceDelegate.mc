@@ -34,7 +34,7 @@ private var lat;
         };
         
        System.println("https://api.openuv.io/api/v1/uv?lat="+lat+"&lng="+long+"T10%3A50%3A52.283Z");
-
+    
        Communications.makeWebRequest(
              "https://api.openuv.io/api/v1/uv?lat="+lat+"&lng="+long+"T10%3A50%3A52.283Z",
             {},
