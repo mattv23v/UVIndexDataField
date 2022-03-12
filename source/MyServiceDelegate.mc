@@ -29,7 +29,7 @@ private var lat;
             :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
             :headers => {
                 "Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED,
-                "x-access-token" => "a41aafda1938afa838bf459f07bc924c"
+                "x-access-token" => "XXXXXXXXXX"
             }
         };
         
