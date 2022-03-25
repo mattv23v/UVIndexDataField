@@ -20,7 +20,6 @@ private var inBackground = false;
         if (savedUV != null) {
             uv = savedUV;
         }
-
     }
  
     public function getServiceDelegate() as ServiceDelegate{

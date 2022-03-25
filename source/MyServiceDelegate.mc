@@ -29,14 +29,11 @@ private var lat;
             :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
             :headers => {
                 "Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED,
-                "x-access-token" => "XXXXXXXXXX"
             }
         };
-        
-       System.println("https://api.openuv.io/api/v1/uv?lat="+lat+"&lng="+long+"T10%3A50%3A52.283Z");
-    
+           
        Communications.makeWebRequest(
-             "https://api.openuv.io/api/v1/uv?lat="+lat+"&lng="+long+"T10%3A50%3A52.283Z",
+             "",
             {},
             options,
             method(:responseCallback)
@@ -49,8 +46,9 @@ private var lat;
         // process.
         System.println("response code "+responseCode);
         if (responseCode == 200) {
-            var uvi = data.get("result").get("uv");
-            var maxuvi = data.get("result").get("uv_max");
+            System.println(data);
+            var uvi = data["currentConditions"]["uvindex"];
+            var maxuvi = data["days"][0]["uvindex"];
             var uviarr = [uvi,maxuvi];
             Background.exit(uviarr);
         }

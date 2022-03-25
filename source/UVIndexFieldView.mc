@@ -57,8 +57,8 @@ private var myLocation = null;
         var textCenter = Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER;
         var bgColor = Graphics.COLOR_WHITE;
         var uv = uvIndexFieldApp.getUv();
-        var uvCur = uv[0].format("%.2f");
-        var uvMax = uv[1].format("%.2f");
+        var uvCur = uv[0].format("%.0f");
+        var uvMax = uv[1].format("%.0f");
 
         if (uv[0] != null) {
             if (uv[0]<=2.99) {
