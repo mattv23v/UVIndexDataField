@@ -4,8 +4,7 @@ import Toybox.Time;
 import Toybox.Background;
 import Toybox.Position;
 import Toybox.Time.Gregorian;
-
-
+import Toybox.Lang;
 
 (:background)
 class UVIndexFieldApp extends Application.AppBase {
@@ -22,7 +21,7 @@ private var inBackground = false;
         }
     }
  
-    public function getServiceDelegate() as ServiceDelegate{
+    public function getServiceDelegate(){
         inBackground=true;     
         return [new $.MyServiceDelegate()] as Array<ServiceDelegate>;
     }
@@ -43,7 +42,7 @@ private var inBackground = false;
         return uv;
     }
     
-    function onBackgroundData(data as array) {
+    function onBackgroundData(data) {
         System.println("callback");
         System.println(data);
         uv = data;
@@ -52,8 +51,8 @@ private var inBackground = false;
     }
 
     //! Return the initial view of your application here
-    function getInitialView() as Array<Views or InputDelegates>? { 
-   	   return [ new UVIndexFieldView() ] as Array<Views or InputDelegates>;
+    function getInitialView() { 
+       return [ new UVIndexFieldView() ];
     }
     
     function getApp() as UVIndexFieldApp {
@@ -63,7 +62,7 @@ private var inBackground = false;
     function registerEvent() {
         var lastTime = Background.getLastTemporalEventTime();
         var now = Time.now();
-        //System.println("now "+now.value());
+       // System.println("now "+now.value());
         //System.println("last time "+lastTime.value());
         if (lastTime == null or (now.value() > (lastTime.value()+900))) {
             Background.registerForTemporalEvent(Time.now());

@@ -1,11 +1,9 @@
-import Toybox.Application;
-import Toybox.Lang;
-import Toybox.WatchUi;
+
 import Toybox.Background;
 import Toybox.System;
 import Toybox.Application.Storage;
-
-
+import Toybox.Lang;
+import Toybox.Communications;
 
 (:background)
 class MyServiceDelegate extends System.ServiceDelegate {
@@ -17,14 +15,16 @@ private var lat;
         ServiceDelegate.initialize(); 
     }     
 
-    function onTemporalEvent() as Void {
+    function onTemporalEvent()  {
         System.println("temporal event");
         var myLastLocation = Application.Storage.getValue("location");
-        lat = myLastLocation[0];
-        long = myLastLocation[1];
-        System.println("Latitude: " + lat); 
-        System.println("Longitude: " + long); 
-        
+        if (myLastLocation != null){
+            lat = myLastLocation[0];
+            long = myLastLocation[1];
+            System.println("Latitude: " + lat); 
+            System.println("Longitude: " + long); 
+        }
+
         var options = {
             :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON,
             :headers => {
@@ -33,17 +33,14 @@ private var lat;
         };
            
        Communications.makeWebRequest(
-             "",
+           "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"+lat+"%2C"+long+"/today?unitGroup=metric&elements=datetime%2Cuvindex&include=days%2Ccurrent&key=2NRMDC3QHQYXXDPBM3B5BMAF3&contentType=json",
             {},
             options,
             method(:responseCallback)
         );
     }
-	
-    function responseCallback(responseCode, data as Dictionary) {
-        // Do stuff with the response data here and send the data
-        // payload back to the app that originated the background
-        // process.
+
+    function responseCallback(responseCode as Lang.Number, data as Null or Lang.Dictionary or Lang.String)as Void {
         System.println("response code "+responseCode);
         if (responseCode == 200) {
             System.println(data);

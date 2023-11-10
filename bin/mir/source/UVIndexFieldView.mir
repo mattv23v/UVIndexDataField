@@ -1,0 +1,1344 @@
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 1; ]
+import Toybox.Activity;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 2; ]
+import Toybox.Graphics;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 3; ]
+import Toybox.Lang;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 4; ]
+import Toybox.WatchUi;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 5; ]
+import Toybox.Time;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 6; ]
+import Toybox.Background;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 7; ]
+import Toybox.System;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 8; ]
+import Toybox.Application;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 9; ]
+import Toybox.Weather;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 10; ]
+import Toybox.Application.Storage;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 11; ]
+import Toybox.Time.Gregorian;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 14; ]
+class UVIndexFieldView extends WatchUi.DataField{
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 14; ]
+    <init> {
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 14; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 15; @position = 11; ]
+    protected
+    var uvIndexFieldApp as UVIndexFieldApp;
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 16; @position = 12; ]
+    private
+    var screenShape;
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 17; @position = 12; ]
+    private
+    var myLocation = null;
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 19; ]
+    function initialize() as Void {
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_19_26_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 20 8 ]
+        %tmp.2 = getv ? :DataField;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 21 8 ]
+        %tmp.4 = getm $.Toybox.Application;
+        %tmp.5 = getv function %tmp.4 :getApp;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        putv self :uvIndexFieldApp %tmp.6;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 22 8 ]
+        %tmp.7 = getm $.Toybox.System;
+        %tmp.8 = getv function %tmp.7 :getDeviceSettings;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        %tmp.10 = getv %tmp.9 :screenShape;
+        putv self :screenShape %tmp.10;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_19_26_stop:
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 31; ]
+    function compute(info) {
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_31_27_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 33 8 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_33_8_if_stmt:
+        %tmp.1 = lgetv %info;
+        %tmp.2 = getv %tmp.1 :currentLocation;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_33_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_33_8_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_33_42_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 34 12 ]
+        %tmp.5 = lgetv %info;
+        %tmp.6 = getv %tmp.5 :currentLocation;
+        %tmp.7 = getv function %tmp.6 :toDegrees;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        putv self :myLocation %tmp.8;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 35 12 ]
+        %tmp.9 = getm $.Toybox.Application.Storage;
+        %tmp.10 = getv function %tmp.9 :setValue;
+        %tmp.11 = "location";
+        %tmp.12 = lgetv %info;
+        %tmp.13 = getv %tmp.12 :currentLocation;
+        %tmp.14 = getv function %tmp.13 :toDegrees;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        invoke %tmp.9 %tmp.10(%tmp.11, %tmp.15);
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_33_42_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_33_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_33_8_if_end:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_31_27_stop:
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 39; ]
+    function isSingleFieldLayout() {
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_39_35_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 40 8 ]
+        %tmp.2 = getv ? :DataField;
+        %tmp.3 = getv function %tmp.2 :getObscurityFlags;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        %tmp.6 = getv ? :OBSCURE_TOP;
+        %tmp.8 = getv ? :OBSCURE_LEFT;
+        %tmp.9 = bitor %tmp.6 %tmp.8;
+        %tmp.11 = getv ? :OBSCURE_BOTTOM;
+        %tmp.12 = bitor %tmp.9 %tmp.11;
+        %tmp.14 = getv ? :OBSCURE_RIGHT;
+        %tmp.15 = bitor %tmp.12 %tmp.14;
+        %tmp.16 = eq %tmp.4 %tmp.15;
+        ret %tmp.16;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_39_35_stop:
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 45; ]
+    function onUpdate(dc as Dc) as Void {
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 46 7 ]
+        [ "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_start" "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_stop" ]
+        %isBTConnected.1 = local;
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :getDeviceSettings;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv %tmp.3 :phoneConnected;
+        lputv %isBTConnected.1 %tmp.4;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 47 4 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_47_4_if_stmt:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_47_8_begin:
+        %tmp.6 = lgetv %isBTConnected.1;
+        %tmp.7 = dup %tmp.6;
+        bf %tmp.7 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_47_26_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_47_26_true:
+        %tmp.9 = getv ? :myLocation;
+        %tmp.10 = null;
+        %tmp.11 = ne %tmp.9 %tmp.10;
+        %tmp.12 = and %tmp.6 %tmp.11;
+        push %tmp.12;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_47_26_end:
+        %tmp.13 = phi [%tmp.7 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_47_8_begin] [%tmp.12 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_47_26_true] [%tmp.13 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_47_26_end];
+        bf %tmp.13 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_47_4_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_47_4_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_47_45_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 48 12 ]
+        %tmp.15 = getv ? :uvIndexFieldApp;
+        %tmp.16 = getv function %tmp.15 :registerEvent;
+        invoke %tmp.15 %tmp.16();
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_47_45_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_47_4_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_47_4_if_end:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 51 8 ]
+        [ "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_start" "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_stop" ]
+        %currentLabel.2 = local;
+        %tmp.17 = "Current";
+        lputv %currentLabel.2 %tmp.17;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 52 8 ]
+        [ "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_start" "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_stop" ]
+        %maxLabel.3 = local;
+        %tmp.18 = "Max";
+        lputv %maxLabel.3 %tmp.18;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 53 8 ]
+        [ "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_start" "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_stop" ]
+        %uvLabel.4 = local;
+        %tmp.19 = "UV";
+        lputv %uvLabel.4 %tmp.19;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 54 8 ]
+        [ "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_start" "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_stop" ]
+        %valueFormat.5 = local;
+        %tmp.20 = 0.2f;
+        lputv %valueFormat.5 %tmp.20;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 55 8 ]
+        [ "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_start" "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_stop" ]
+        %width.6 = local;
+        %tmp.21 = lgetv %dc;
+        %tmp.22 = getv function %tmp.21 :getWidth;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        lputv %width.6 %tmp.23;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 56 8 ]
+        [ "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_start" "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_stop" ]
+        %height.7 = local;
+        %tmp.24 = lgetv %dc;
+        %tmp.25 = getv function %tmp.24 :getHeight;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        lputv %height.7 %tmp.26;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 57 8 ]
+        [ "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_start" "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_stop" ]
+        %textCenter.8 = local;
+        %tmp.27 = getm $.Toybox.Graphics;
+        %tmp.28 = getv %tmp.27 :TEXT_JUSTIFY_CENTER;
+        %tmp.29 = getm $.Toybox.Graphics;
+        %tmp.30 = getv %tmp.29 :TEXT_JUSTIFY_VCENTER;
+        %tmp.31 = bitor %tmp.28 %tmp.30;
+        lputv %textCenter.8 %tmp.31;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 58 8 ]
+        [ "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_start" "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_stop" ]
+        %bgColor.9 = local;
+        %tmp.32 = getm $.Toybox.Graphics;
+        %tmp.33 = getv %tmp.32 :COLOR_WHITE;
+        lputv %bgColor.9 %tmp.33;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 59 8 ]
+        [ "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_start" "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_stop" ]
+        %uv.10 = local;
+        %tmp.35 = getv ? :uvIndexFieldApp;
+        %tmp.36 = getv function %tmp.35 :getUv;
+        %tmp.37 = invoke %tmp.35 %tmp.36();
+        lputv %uv.10 %tmp.37;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 60 8 ]
+        [ "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_start" "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_stop" ]
+        %uvCur.11 = local;
+        %tmp.39 = lgetv %uv.10;
+        %tmp.40 = 0;
+        %tmp.41 = agetv %tmp.39 %tmp.40;
+        %tmp.42 = getv function %tmp.41 :format;
+        %tmp.43 = "%.0f";
+        %tmp.44 = invoke %tmp.41 %tmp.42(%tmp.43);
+        lputv %uvCur.11 %tmp.44;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 61 8 ]
+        [ "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_start" "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_stop" ]
+        %uvMax.12 = local;
+        %tmp.46 = lgetv %uv.10;
+        %tmp.47 = 1;
+        %tmp.48 = agetv %tmp.46 %tmp.47;
+        %tmp.49 = getv function %tmp.48 :format;
+        %tmp.50 = "%.0f";
+        %tmp.51 = invoke %tmp.48 %tmp.49(%tmp.50);
+        lputv %uvMax.12 %tmp.51;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 63 8 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_63_8_if_stmt:
+        %tmp.53 = lgetv %uv.10;
+        %tmp.54 = 0;
+        %tmp.55 = agetv %tmp.53 %tmp.54;
+        %tmp.56 = null;
+        %tmp.57 = ne %tmp.55 %tmp.56;
+        bf %tmp.57 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_63_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_63_8_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_63_27_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 64 12 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_64_12_if_stmt:
+        %tmp.59 = lgetv %uv.10;
+        %tmp.60 = 0;
+        %tmp.61 = agetv %tmp.59 %tmp.60;
+        %tmp.62 = 2.99;
+        %tmp.63 = lte %tmp.61 %tmp.62;
+        bf %tmp.63 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_64_12_if_false;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_64_12_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_64_29_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 65 16 ]
+        %tmp.64 = getm $.Toybox.Graphics;
+        %tmp.65 = getv %tmp.64 :COLOR_GREEN;
+        lputv %bgColor.9 %tmp.65;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_64_29_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_64_12_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_64_12_if_false:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 67 17 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_67_17_if_stmt:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_67_21_begin:
+        %tmp.67 = lgetv %uv.10;
+        %tmp.68 = 0;
+        %tmp.69 = agetv %tmp.67 %tmp.68;
+        %tmp.70 = 3;
+        %tmp.71 = gte %tmp.69 %tmp.70;
+        %tmp.72 = dup %tmp.71;
+        bf %tmp.72 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_67_33_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_67_33_true:
+        %tmp.74 = lgetv %uv.10;
+        %tmp.75 = 0;
+        %tmp.76 = agetv %tmp.74 %tmp.75;
+        %tmp.77 = 5.99;
+        %tmp.78 = lte %tmp.76 %tmp.77;
+        %tmp.79 = and %tmp.71 %tmp.78;
+        push %tmp.79;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_67_33_end:
+        %tmp.80 = phi [%tmp.72 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_67_21_begin] [%tmp.79 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_67_33_true] [%tmp.80 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_67_33_end];
+        bf %tmp.80 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_67_17_if_false;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_67_17_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_67_45_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 68 16 ]
+        %tmp.81 = getm $.Toybox.Graphics;
+        %tmp.82 = getv %tmp.81 :COLOR_YELLOW;
+        lputv %bgColor.9 %tmp.82;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_67_45_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_67_17_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_67_17_if_false:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 70 17 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_70_17_if_stmt:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_70_21_begin:
+        %tmp.84 = lgetv %uv.10;
+        %tmp.85 = 0;
+        %tmp.86 = agetv %tmp.84 %tmp.85;
+        %tmp.87 = 6;
+        %tmp.88 = gte %tmp.86 %tmp.87;
+        %tmp.89 = dup %tmp.88;
+        bf %tmp.89 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_70_33_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_70_33_true:
+        %tmp.91 = lgetv %uv.10;
+        %tmp.92 = 0;
+        %tmp.93 = agetv %tmp.91 %tmp.92;
+        %tmp.94 = 7.99;
+        %tmp.95 = lte %tmp.93 %tmp.94;
+        %tmp.96 = and %tmp.88 %tmp.95;
+        push %tmp.96;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_70_33_end:
+        %tmp.97 = phi [%tmp.89 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_70_21_begin] [%tmp.96 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_70_33_true] [%tmp.97 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_70_33_end];
+        bf %tmp.97 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_70_17_if_false;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_70_17_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_70_45_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 71 16 ]
+        %tmp.98 = getm $.Toybox.Graphics;
+        %tmp.99 = getv %tmp.98 :COLOR_ORANGE;
+        lputv %bgColor.9 %tmp.99;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_70_45_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_70_17_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_70_17_if_false:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 73 18 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_73_18_if_stmt:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_73_22_begin:
+        %tmp.101 = lgetv %uv.10;
+        %tmp.102 = 0;
+        %tmp.103 = agetv %tmp.101 %tmp.102;
+        %tmp.104 = 8;
+        %tmp.105 = gte %tmp.103 %tmp.104;
+        %tmp.106 = dup %tmp.105;
+        bf %tmp.106 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_73_34_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_73_34_true:
+        %tmp.108 = lgetv %uv.10;
+        %tmp.109 = 0;
+        %tmp.110 = agetv %tmp.108 %tmp.109;
+        %tmp.111 = 10.99;
+        %tmp.112 = lte %tmp.110 %tmp.111;
+        %tmp.113 = and %tmp.105 %tmp.112;
+        push %tmp.113;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_73_34_end:
+        %tmp.114 = phi [%tmp.106 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_73_22_begin] [%tmp.113 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_73_34_true] [%tmp.114 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_73_34_end];
+        bf %tmp.114 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_73_18_if_false;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_73_18_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_73_47_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 74 16 ]
+        %tmp.115 = getm $.Toybox.Graphics;
+        %tmp.116 = getv %tmp.115 :COLOR_RED;
+        lputv %bgColor.9 %tmp.116;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_73_47_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_73_18_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_73_18_if_false:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 76 18 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_76_18_if_stmt:
+        %tmp.118 = lgetv %uv.10;
+        %tmp.119 = 0;
+        %tmp.120 = agetv %tmp.118 %tmp.119;
+        %tmp.121 = 11;
+        %tmp.122 = gte %tmp.120 %tmp.121;
+        bf %tmp.122 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_76_18_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_76_18_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_76_33_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 77 16 ]
+        %tmp.123 = getm $.Toybox.Graphics;
+        %tmp.124 = getv %tmp.123 :COLOR_PURPLE;
+        lputv %bgColor.9 %tmp.124;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_76_33_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_76_18_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_76_18_if_end:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_73_18_if_end:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_70_17_if_end:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_67_17_if_end:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_64_12_if_end:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_63_27_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_63_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_63_8_if_end:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 80 8 ]
+        %tmp.125 = lgetv %dc;
+        %tmp.126 = getv function %tmp.125 :setColor;
+        %tmp.127 = getm $.Toybox.Graphics;
+        %tmp.128 = getv %tmp.127 :COLOR_TRANSPARENT;
+        %tmp.130 = lgetv %bgColor.9;
+        invoke %tmp.125 %tmp.126(%tmp.128, %tmp.130);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 81 8 ]
+        %tmp.131 = lgetv %dc;
+        %tmp.132 = getv function %tmp.131 :clear;
+        invoke %tmp.131 %tmp.132();
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 82 8 ]
+        %tmp.133 = lgetv %dc;
+        %tmp.134 = getv function %tmp.133 :setColor;
+        %tmp.135 = getm $.Toybox.Graphics;
+        %tmp.136 = getv %tmp.135 :COLOR_BLACK;
+        %tmp.137 = getm $.Toybox.Graphics;
+        %tmp.138 = getv %tmp.137 :COLOR_TRANSPARENT;
+        invoke %tmp.133 %tmp.134(%tmp.136, %tmp.138);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 84 8 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_8_if_stmt:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_12_begin:
+        %tmp.140 = getv ? :screenShape;
+        %tmp.141 = 3;
+        %tmp.142 = eq %tmp.140 %tmp.141;
+        %tmp.143 = dup %tmp.142;
+        bf %tmp.143 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_33_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_33_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_35_begin:
+        %tmp.145 = lgetv %width.6;
+        %tmp.146 = 282;
+        %tmp.147 = eq %tmp.145 %tmp.146;
+        %tmp.148 = dup %tmp.147;
+        bt %tmp.148 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_51_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_51_false:
+        %tmp.150 = lgetv %width.6;
+        %tmp.151 = 140;
+        %tmp.152 = eq %tmp.150 %tmp.151;
+        %tmp.153 = or %tmp.147 %tmp.152;
+        push %tmp.153;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_51_end:
+        %tmp.154 = phi [%tmp.148 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_35_begin] [%tmp.153 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_51_false] [%tmp.154 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_51_end];
+        %tmp.155 = not %tmp.154;
+        %tmp.156 = and %tmp.142 %tmp.155;
+        push %tmp.156;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_33_end:
+        %tmp.157 = phi [%tmp.143 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_12_begin] [%tmp.156 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_33_true] [%tmp.157 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_33_end];
+        bf %tmp.157 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_8_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_66_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 85 12 ]
+        %tmp.158 = lgetv %dc;
+        %tmp.159 = getv function %tmp.158 :drawText;
+        %tmp.161 = lgetv %width.6;
+        %tmp.162 = 2;
+        %tmp.163 = div %tmp.161 %tmp.162;
+        %tmp.164 = 22;
+        %tmp.165 = sub %tmp.163 %tmp.164;
+        %tmp.166 = 5;
+        %tmp.168 = lgetv %height.7;
+        %tmp.169 = 35;
+        %tmp.170 = sub %tmp.168 %tmp.169;
+        %tmp.171 = 2;
+        %tmp.172 = div %tmp.170 %tmp.171;
+        %tmp.173 = add %tmp.166 %tmp.172;
+        %tmp.174 = getm $.Toybox.Graphics;
+        %tmp.175 = getv %tmp.174 :FONT_SMALL;
+        %tmp.177 = lgetv %currentLabel.2;
+        %tmp.179 = lgetv %textCenter.8;
+        invoke %tmp.158 %tmp.159(%tmp.165, %tmp.173, %tmp.175, %tmp.177, %tmp.179);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 86 12 ]
+        %tmp.180 = lgetv %dc;
+        %tmp.181 = getv function %tmp.180 :drawText;
+        %tmp.183 = lgetv %width.6;
+        %tmp.184 = 2;
+        %tmp.185 = div %tmp.183 %tmp.184;
+        %tmp.186 = 26;
+        %tmp.187 = add %tmp.185 %tmp.186;
+        %tmp.188 = 5;
+        %tmp.190 = lgetv %height.7;
+        %tmp.191 = 35;
+        %tmp.192 = sub %tmp.190 %tmp.191;
+        %tmp.193 = 2;
+        %tmp.194 = div %tmp.192 %tmp.193;
+        %tmp.195 = add %tmp.188 %tmp.194;
+        %tmp.196 = getm $.Toybox.Graphics;
+        %tmp.197 = getv %tmp.196 :FONT_SMALL;
+        %tmp.199 = lgetv %maxLabel.3;
+        %tmp.201 = lgetv %textCenter.8;
+        invoke %tmp.180 %tmp.181(%tmp.187, %tmp.195, %tmp.197, %tmp.199, %tmp.201);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 87 12 ]
+        %tmp.202 = lgetv %dc;
+        %tmp.203 = getv function %tmp.202 :drawText;
+        %tmp.205 = lgetv %width.6;
+        %tmp.206 = 2;
+        %tmp.207 = div %tmp.205 %tmp.206;
+        %tmp.208 = 2;
+        %tmp.209 = sub %tmp.207 %tmp.208;
+        %tmp.211 = lgetv %height.7;
+        %tmp.212 = 2;
+        %tmp.213 = div %tmp.211 %tmp.212;
+        %tmp.214 = 8;
+        %tmp.215 = add %tmp.213 %tmp.214;
+        %tmp.216 = getm $.Toybox.Graphics;
+        %tmp.217 = getv %tmp.216 :FONT_XTINY;
+        %tmp.219 = lgetv %uvLabel.4;
+        %tmp.221 = lgetv %textCenter.8;
+        invoke %tmp.202 %tmp.203(%tmp.209, %tmp.215, %tmp.217, %tmp.219, %tmp.221);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 88 12 ]
+        %tmp.222 = lgetv %dc;
+        %tmp.223 = getv function %tmp.222 :drawText;
+        %tmp.225 = lgetv %width.6;
+        %tmp.226 = 2;
+        %tmp.227 = div %tmp.225 %tmp.226;
+        %tmp.228 = 32;
+        %tmp.229 = sub %tmp.227 %tmp.228;
+        %tmp.231 = lgetv %height.7;
+        %tmp.232 = 2;
+        %tmp.233 = div %tmp.231 %tmp.232;
+        %tmp.234 = 8;
+        %tmp.235 = add %tmp.233 %tmp.234;
+        %tmp.236 = getm $.Toybox.Graphics;
+        %tmp.237 = getv %tmp.236 :FONT_SMALL;
+        %tmp.239 = lgetv %uvCur.11;
+        %tmp.241 = lgetv %textCenter.8;
+        invoke %tmp.222 %tmp.223(%tmp.229, %tmp.235, %tmp.237, %tmp.239, %tmp.241);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 89 12 ]
+        %tmp.242 = lgetv %dc;
+        %tmp.243 = getv function %tmp.242 :drawText;
+        %tmp.245 = lgetv %width.6;
+        %tmp.246 = 2;
+        %tmp.247 = div %tmp.245 %tmp.246;
+        %tmp.248 = 28;
+        %tmp.249 = add %tmp.247 %tmp.248;
+        %tmp.251 = lgetv %height.7;
+        %tmp.252 = 2;
+        %tmp.253 = div %tmp.251 %tmp.252;
+        %tmp.254 = 8;
+        %tmp.255 = add %tmp.253 %tmp.254;
+        %tmp.256 = getm $.Toybox.Graphics;
+        %tmp.257 = getv %tmp.256 :FONT_SMALL;
+        %tmp.259 = lgetv %uvMax.12;
+        %tmp.261 = lgetv %textCenter.8;
+        invoke %tmp.242 %tmp.243(%tmp.249, %tmp.255, %tmp.257, %tmp.259, %tmp.261);
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_66_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_84_8_if_end:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 91 8 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_8_if_stmt:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_12_begin:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_12_begin:
+        %tmp.263 = getv ? :screenShape;
+        %tmp.264 = 3;
+        %tmp.265 = eq %tmp.263 %tmp.264;
+        %tmp.266 = dup %tmp.265;
+        bf %tmp.266 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_33_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_33_true:
+        %tmp.268 = lgetv %width.6;
+        %tmp.269 = 282;
+        %tmp.270 = eq %tmp.268 %tmp.269;
+        %tmp.271 = and %tmp.265 %tmp.270;
+        push %tmp.271;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_33_end:
+        %tmp.272 = phi [%tmp.266 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_12_begin] [%tmp.271 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_33_true] [%tmp.272 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_33_end];
+        %tmp.273 = dup %tmp.272;
+        bt %tmp.273 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_49_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_49_false:
+        %tmp.275 = lgetv %width.6;
+        %tmp.276 = 140;
+        %tmp.277 = eq %tmp.275 %tmp.276;
+        %tmp.278 = or %tmp.272 %tmp.277;
+        push %tmp.278;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_49_end:
+        %tmp.279 = phi [%tmp.273 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_12_begin] [%tmp.278 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_49_false] [%tmp.279 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_49_end];
+        bf %tmp.279 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_8_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_63_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 92 12 ]
+        %tmp.280 = lgetv %dc;
+        %tmp.281 = getv function %tmp.280 :drawText;
+        %tmp.283 = lgetv %width.6;
+        %tmp.284 = 2;
+        %tmp.285 = div %tmp.283 %tmp.284;
+        %tmp.286 = 25;
+        %tmp.287 = sub %tmp.285 %tmp.286;
+        %tmp.288 = 5;
+        %tmp.290 = lgetv %height.7;
+        %tmp.291 = 35;
+        %tmp.292 = sub %tmp.290 %tmp.291;
+        %tmp.293 = 2;
+        %tmp.294 = div %tmp.292 %tmp.293;
+        %tmp.295 = add %tmp.288 %tmp.294;
+        %tmp.296 = getm $.Toybox.Graphics;
+        %tmp.297 = getv %tmp.296 :FONT_SMALL;
+        %tmp.299 = lgetv %currentLabel.2;
+        %tmp.301 = lgetv %textCenter.8;
+        invoke %tmp.280 %tmp.281(%tmp.287, %tmp.295, %tmp.297, %tmp.299, %tmp.301);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 93 12 ]
+        %tmp.302 = lgetv %dc;
+        %tmp.303 = getv function %tmp.302 :drawText;
+        %tmp.305 = lgetv %width.6;
+        %tmp.306 = 2;
+        %tmp.307 = div %tmp.305 %tmp.306;
+        %tmp.308 = 34;
+        %tmp.309 = add %tmp.307 %tmp.308;
+        %tmp.310 = 5;
+        %tmp.312 = lgetv %height.7;
+        %tmp.313 = 35;
+        %tmp.314 = sub %tmp.312 %tmp.313;
+        %tmp.315 = 2;
+        %tmp.316 = div %tmp.314 %tmp.315;
+        %tmp.317 = add %tmp.310 %tmp.316;
+        %tmp.318 = getm $.Toybox.Graphics;
+        %tmp.319 = getv %tmp.318 :FONT_SMALL;
+        %tmp.321 = lgetv %maxLabel.3;
+        %tmp.323 = lgetv %textCenter.8;
+        invoke %tmp.302 %tmp.303(%tmp.309, %tmp.317, %tmp.319, %tmp.321, %tmp.323);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 94 12 ]
+        %tmp.324 = lgetv %dc;
+        %tmp.325 = getv function %tmp.324 :drawText;
+        %tmp.327 = lgetv %width.6;
+        %tmp.328 = 2;
+        %tmp.329 = div %tmp.327 %tmp.328;
+        %tmp.330 = 2;
+        %tmp.331 = sub %tmp.329 %tmp.330;
+        %tmp.333 = lgetv %height.7;
+        %tmp.334 = 2;
+        %tmp.335 = div %tmp.333 %tmp.334;
+        %tmp.336 = 8;
+        %tmp.337 = add %tmp.335 %tmp.336;
+        %tmp.338 = getm $.Toybox.Graphics;
+        %tmp.339 = getv %tmp.338 :FONT_XTINY;
+        %tmp.341 = lgetv %uvLabel.4;
+        %tmp.343 = lgetv %textCenter.8;
+        invoke %tmp.324 %tmp.325(%tmp.331, %tmp.337, %tmp.339, %tmp.341, %tmp.343);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 95 12 ]
+        %tmp.344 = lgetv %dc;
+        %tmp.345 = getv function %tmp.344 :drawText;
+        %tmp.347 = lgetv %width.6;
+        %tmp.348 = 2;
+        %tmp.349 = div %tmp.347 %tmp.348;
+        %tmp.350 = 37;
+        %tmp.351 = sub %tmp.349 %tmp.350;
+        %tmp.353 = lgetv %height.7;
+        %tmp.354 = 2;
+        %tmp.355 = div %tmp.353 %tmp.354;
+        %tmp.356 = 8;
+        %tmp.357 = add %tmp.355 %tmp.356;
+        %tmp.358 = getm $.Toybox.Graphics;
+        %tmp.359 = getv %tmp.358 :FONT_SMALL;
+        %tmp.361 = lgetv %uvCur.11;
+        %tmp.363 = lgetv %textCenter.8;
+        invoke %tmp.344 %tmp.345(%tmp.351, %tmp.357, %tmp.359, %tmp.361, %tmp.363);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 96 12 ]
+        %tmp.364 = lgetv %dc;
+        %tmp.365 = getv function %tmp.364 :drawText;
+        %tmp.367 = lgetv %width.6;
+        %tmp.368 = 2;
+        %tmp.369 = div %tmp.367 %tmp.368;
+        %tmp.370 = 35;
+        %tmp.371 = add %tmp.369 %tmp.370;
+        %tmp.373 = lgetv %height.7;
+        %tmp.374 = 2;
+        %tmp.375 = div %tmp.373 %tmp.374;
+        %tmp.376 = 8;
+        %tmp.377 = add %tmp.375 %tmp.376;
+        %tmp.378 = getm $.Toybox.Graphics;
+        %tmp.379 = getv %tmp.378 :FONT_SMALL;
+        %tmp.381 = lgetv %uvMax.12;
+        %tmp.383 = lgetv %textCenter.8;
+        invoke %tmp.364 %tmp.365(%tmp.371, %tmp.377, %tmp.379, %tmp.381, %tmp.383);
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_63_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_91_8_if_end:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 99 8 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_99_8_if_stmt:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_99_12_begin:
+        %tmp.384 = self;
+        %tmp.385 = getv function %tmp.384 :isSingleFieldLayout;
+        %tmp.386 = invoke %tmp.384 %tmp.385();
+        %tmp.387 = dup %tmp.386;
+        bf %tmp.387 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_99_38_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_99_38_true:
+        %tmp.389 = lgetv %width.6;
+        %tmp.390 = 390;
+        %tmp.391 = eq %tmp.389 %tmp.390;
+        %tmp.392 = and %tmp.386 %tmp.391;
+        push %tmp.392;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_99_38_end:
+        %tmp.393 = phi [%tmp.387 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_99_12_begin] [%tmp.392 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_99_38_true] [%tmp.393 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_99_38_end];
+        bf %tmp.393 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_99_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_99_8_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_99_54_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 100 12 ]
+        %tmp.394 = lgetv %dc;
+        %tmp.395 = getv function %tmp.394 :drawText;
+        %tmp.397 = lgetv %width.6;
+        %tmp.398 = 2;
+        %tmp.399 = div %tmp.397 %tmp.398;
+        %tmp.400 = 60;
+        %tmp.401 = sub %tmp.399 %tmp.400;
+        %tmp.403 = lgetv %height.7;
+        %tmp.404 = 2;
+        %tmp.405 = div %tmp.403 %tmp.404;
+        %tmp.406 = 40;
+        %tmp.407 = sub %tmp.405 %tmp.406;
+        %tmp.408 = getm $.Toybox.Graphics;
+        %tmp.409 = getv %tmp.408 :FONT_LARGE;
+        %tmp.411 = lgetv %currentLabel.2;
+        %tmp.413 = lgetv %textCenter.8;
+        invoke %tmp.394 %tmp.395(%tmp.401, %tmp.407, %tmp.409, %tmp.411, %tmp.413);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 101 12 ]
+        %tmp.414 = lgetv %dc;
+        %tmp.415 = getv function %tmp.414 :drawText;
+        %tmp.417 = lgetv %width.6;
+        %tmp.418 = 2;
+        %tmp.419 = div %tmp.417 %tmp.418;
+        %tmp.420 = 85;
+        %tmp.421 = add %tmp.419 %tmp.420;
+        %tmp.423 = lgetv %height.7;
+        %tmp.424 = 2;
+        %tmp.425 = div %tmp.423 %tmp.424;
+        %tmp.426 = 40;
+        %tmp.427 = sub %tmp.425 %tmp.426;
+        %tmp.428 = getm $.Toybox.Graphics;
+        %tmp.429 = getv %tmp.428 :FONT_LARGE;
+        %tmp.431 = lgetv %maxLabel.3;
+        %tmp.433 = lgetv %textCenter.8;
+        invoke %tmp.414 %tmp.415(%tmp.421, %tmp.427, %tmp.429, %tmp.431, %tmp.433);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 102 12 ]
+        %tmp.434 = lgetv %dc;
+        %tmp.435 = getv function %tmp.434 :drawText;
+        %tmp.437 = lgetv %width.6;
+        %tmp.438 = 2;
+        %tmp.439 = div %tmp.437 %tmp.438;
+        %tmp.440 = 1;
+        %tmp.441 = add %tmp.439 %tmp.440;
+        %tmp.443 = lgetv %height.7;
+        %tmp.444 = 2;
+        %tmp.445 = div %tmp.443 %tmp.444;
+        %tmp.446 = 4;
+        %tmp.447 = add %tmp.445 %tmp.446;
+        %tmp.448 = getm $.Toybox.Graphics;
+        %tmp.449 = getv %tmp.448 :FONT_XTINY;
+        %tmp.451 = lgetv %uvLabel.4;
+        %tmp.453 = lgetv %textCenter.8;
+        invoke %tmp.434 %tmp.435(%tmp.441, %tmp.447, %tmp.449, %tmp.451, %tmp.453);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 103 12 ]
+        %tmp.454 = lgetv %dc;
+        %tmp.455 = getv function %tmp.454 :drawText;
+        %tmp.457 = lgetv %width.6;
+        %tmp.458 = 2;
+        %tmp.459 = div %tmp.457 %tmp.458;
+        %tmp.460 = 87;
+        %tmp.461 = sub %tmp.459 %tmp.460;
+        %tmp.463 = lgetv %height.7;
+        %tmp.464 = 2;
+        %tmp.465 = div %tmp.463 %tmp.464;
+        %tmp.466 = 7;
+        %tmp.467 = add %tmp.465 %tmp.466;
+        %tmp.468 = getm $.Toybox.Graphics;
+        %tmp.469 = getv %tmp.468 :FONT_LARGE;
+        %tmp.471 = lgetv %uvCur.11;
+        %tmp.473 = lgetv %textCenter.8;
+        invoke %tmp.454 %tmp.455(%tmp.461, %tmp.467, %tmp.469, %tmp.471, %tmp.473);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 104 12 ]
+        %tmp.474 = lgetv %dc;
+        %tmp.475 = getv function %tmp.474 :drawText;
+        %tmp.477 = lgetv %width.6;
+        %tmp.478 = 2;
+        %tmp.479 = div %tmp.477 %tmp.478;
+        %tmp.480 = 88;
+        %tmp.481 = add %tmp.479 %tmp.480;
+        %tmp.483 = lgetv %height.7;
+        %tmp.484 = 2;
+        %tmp.485 = div %tmp.483 %tmp.484;
+        %tmp.486 = 7;
+        %tmp.487 = add %tmp.485 %tmp.486;
+        %tmp.488 = getm $.Toybox.Graphics;
+        %tmp.489 = getv %tmp.488 :FONT_LARGE;
+        %tmp.491 = lgetv %uvMax.12;
+        %tmp.493 = lgetv %textCenter.8;
+        invoke %tmp.474 %tmp.475(%tmp.481, %tmp.487, %tmp.489, %tmp.491, %tmp.493);
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_99_54_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_99_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_99_8_if_end:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 106 8 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_8_if_stmt:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_12_begin:
+        %tmp.494 = self;
+        %tmp.495 = getv function %tmp.494 :isSingleFieldLayout;
+        %tmp.496 = invoke %tmp.494 %tmp.495();
+        %tmp.497 = not %tmp.496;
+        %tmp.498 = dup %tmp.497;
+        bf %tmp.498 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_39_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_39_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_40_begin:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_40_begin:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_40_begin:
+        %tmp.500 = lgetv %width.6;
+        %tmp.501 = 390;
+        %tmp.502 = eq %tmp.500 %tmp.501;
+        %tmp.503 = dup %tmp.502;
+        bt %tmp.503 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_56_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_56_false:
+        %tmp.505 = lgetv %width.6;
+        %tmp.506 = 194;
+        %tmp.507 = eq %tmp.505 %tmp.506;
+        %tmp.508 = or %tmp.502 %tmp.507;
+        push %tmp.508;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_56_end:
+        %tmp.509 = phi [%tmp.503 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_40_begin] [%tmp.508 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_56_false] [%tmp.509 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_56_end];
+        %tmp.510 = dup %tmp.509;
+        bt %tmp.510 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_73_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_73_false:
+        %tmp.512 = lgetv %width.6;
+        %tmp.513 = 207;
+        %tmp.514 = eq %tmp.512 %tmp.513;
+        %tmp.515 = or %tmp.509 %tmp.514;
+        push %tmp.515;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_73_end:
+        %tmp.516 = phi [%tmp.510 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_40_begin] [%tmp.515 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_73_false] [%tmp.516 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_73_end];
+        %tmp.517 = dup %tmp.516;
+        bt %tmp.517 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_90_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_90_false:
+        %tmp.519 = lgetv %width.6;
+        %tmp.520 = 416;
+        %tmp.521 = eq %tmp.519 %tmp.520;
+        %tmp.522 = or %tmp.516 %tmp.521;
+        push %tmp.522;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_90_end:
+        %tmp.523 = phi [%tmp.517 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_40_begin] [%tmp.522 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_90_false] [%tmp.523 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_90_end];
+        %tmp.524 = and %tmp.497 %tmp.523;
+        push %tmp.524;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_39_end:
+        %tmp.525 = phi [%tmp.498 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_12_begin] [%tmp.524 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_39_true] [%tmp.525 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_39_end];
+        bf %tmp.525 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_8_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_105_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 107 12 ]
+        %tmp.526 = lgetv %dc;
+        %tmp.527 = getv function %tmp.526 :drawText;
+        %tmp.529 = lgetv %width.6;
+        %tmp.530 = 2;
+        %tmp.531 = div %tmp.529 %tmp.530;
+        %tmp.532 = 30;
+        %tmp.533 = sub %tmp.531 %tmp.532;
+        %tmp.534 = 5;
+        %tmp.536 = lgetv %height.7;
+        %tmp.537 = 35;
+        %tmp.538 = sub %tmp.536 %tmp.537;
+        %tmp.539 = 2;
+        %tmp.540 = div %tmp.538 %tmp.539;
+        %tmp.541 = add %tmp.534 %tmp.540;
+        %tmp.542 = getm $.Toybox.Graphics;
+        %tmp.543 = getv %tmp.542 :FONT_XTINY;
+        %tmp.545 = lgetv %currentLabel.2;
+        %tmp.547 = lgetv %textCenter.8;
+        invoke %tmp.526 %tmp.527(%tmp.533, %tmp.541, %tmp.543, %tmp.545, %tmp.547);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 108 12 ]
+        %tmp.548 = lgetv %dc;
+        %tmp.549 = getv function %tmp.548 :drawText;
+        %tmp.551 = lgetv %width.6;
+        %tmp.552 = 2;
+        %tmp.553 = div %tmp.551 %tmp.552;
+        %tmp.554 = 40;
+        %tmp.555 = add %tmp.553 %tmp.554;
+        %tmp.556 = 5;
+        %tmp.558 = lgetv %height.7;
+        %tmp.559 = 35;
+        %tmp.560 = sub %tmp.558 %tmp.559;
+        %tmp.561 = 2;
+        %tmp.562 = div %tmp.560 %tmp.561;
+        %tmp.563 = add %tmp.556 %tmp.562;
+        %tmp.564 = getm $.Toybox.Graphics;
+        %tmp.565 = getv %tmp.564 :FONT_XTINY;
+        %tmp.567 = lgetv %maxLabel.3;
+        %tmp.569 = lgetv %textCenter.8;
+        invoke %tmp.548 %tmp.549(%tmp.555, %tmp.563, %tmp.565, %tmp.567, %tmp.569);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 109 12 ]
+        %tmp.570 = lgetv %dc;
+        %tmp.571 = getv function %tmp.570 :drawText;
+        %tmp.573 = lgetv %width.6;
+        %tmp.574 = 2;
+        %tmp.575 = div %tmp.573 %tmp.574;
+        %tmp.576 = 2;
+        %tmp.577 = sub %tmp.575 %tmp.576;
+        %tmp.579 = lgetv %height.7;
+        %tmp.580 = 2;
+        %tmp.581 = div %tmp.579 %tmp.580;
+        %tmp.582 = 14;
+        %tmp.583 = add %tmp.581 %tmp.582;
+        %tmp.584 = getm $.Toybox.Graphics;
+        %tmp.585 = getv %tmp.584 :FONT_XTINY;
+        %tmp.587 = lgetv %uvLabel.4;
+        %tmp.589 = lgetv %textCenter.8;
+        invoke %tmp.570 %tmp.571(%tmp.577, %tmp.583, %tmp.585, %tmp.587, %tmp.589);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 110 12 ]
+        %tmp.590 = lgetv %dc;
+        %tmp.591 = getv function %tmp.590 :drawText;
+        %tmp.593 = lgetv %width.6;
+        %tmp.594 = 2;
+        %tmp.595 = div %tmp.593 %tmp.594;
+        %tmp.596 = 45;
+        %tmp.597 = sub %tmp.595 %tmp.596;
+        %tmp.599 = lgetv %height.7;
+        %tmp.600 = 2;
+        %tmp.601 = div %tmp.599 %tmp.600;
+        %tmp.602 = 14;
+        %tmp.603 = add %tmp.601 %tmp.602;
+        %tmp.604 = getm $.Toybox.Graphics;
+        %tmp.605 = getv %tmp.604 :FONT_XTINY;
+        %tmp.607 = lgetv %uvCur.11;
+        %tmp.609 = lgetv %textCenter.8;
+        invoke %tmp.590 %tmp.591(%tmp.597, %tmp.603, %tmp.605, %tmp.607, %tmp.609);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 111 12 ]
+        %tmp.610 = lgetv %dc;
+        %tmp.611 = getv function %tmp.610 :drawText;
+        %tmp.613 = lgetv %width.6;
+        %tmp.614 = 2;
+        %tmp.615 = div %tmp.613 %tmp.614;
+        %tmp.616 = 42;
+        %tmp.617 = add %tmp.615 %tmp.616;
+        %tmp.619 = lgetv %height.7;
+        %tmp.620 = 2;
+        %tmp.621 = div %tmp.619 %tmp.620;
+        %tmp.622 = 14;
+        %tmp.623 = add %tmp.621 %tmp.622;
+        %tmp.624 = getm $.Toybox.Graphics;
+        %tmp.625 = getv %tmp.624 :FONT_XTINY;
+        %tmp.627 = lgetv %uvMax.12;
+        %tmp.629 = lgetv %textCenter.8;
+        invoke %tmp.610 %tmp.611(%tmp.617, %tmp.623, %tmp.625, %tmp.627, %tmp.629);
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_105_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_106_8_if_end:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 114 8 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_114_8_if_stmt:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_114_12_begin:
+        %tmp.630 = self;
+        %tmp.631 = getv function %tmp.630 :isSingleFieldLayout;
+        %tmp.632 = invoke %tmp.630 %tmp.631();
+        %tmp.633 = dup %tmp.632;
+        bf %tmp.633 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_114_38_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_114_38_true:
+        %tmp.635 = lgetv %width.6;
+        %tmp.636 = 416;
+        %tmp.637 = eq %tmp.635 %tmp.636;
+        %tmp.638 = and %tmp.632 %tmp.637;
+        push %tmp.638;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_114_38_end:
+        %tmp.639 = phi [%tmp.633 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_114_12_begin] [%tmp.638 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_114_38_true] [%tmp.639 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_114_38_end];
+        bf %tmp.639 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_114_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_114_8_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_114_54_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 115 12 ]
+        %tmp.640 = lgetv %dc;
+        %tmp.641 = getv function %tmp.640 :drawText;
+        %tmp.643 = lgetv %width.6;
+        %tmp.644 = 2;
+        %tmp.645 = div %tmp.643 %tmp.644;
+        %tmp.646 = 60;
+        %tmp.647 = sub %tmp.645 %tmp.646;
+        %tmp.649 = lgetv %height.7;
+        %tmp.650 = 2;
+        %tmp.651 = div %tmp.649 %tmp.650;
+        %tmp.652 = 40;
+        %tmp.653 = sub %tmp.651 %tmp.652;
+        %tmp.654 = getm $.Toybox.Graphics;
+        %tmp.655 = getv %tmp.654 :FONT_LARGE;
+        %tmp.657 = lgetv %currentLabel.2;
+        %tmp.659 = lgetv %textCenter.8;
+        invoke %tmp.640 %tmp.641(%tmp.647, %tmp.653, %tmp.655, %tmp.657, %tmp.659);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 116 12 ]
+        %tmp.660 = lgetv %dc;
+        %tmp.661 = getv function %tmp.660 :drawText;
+        %tmp.663 = lgetv %width.6;
+        %tmp.664 = 2;
+        %tmp.665 = div %tmp.663 %tmp.664;
+        %tmp.666 = 85;
+        %tmp.667 = add %tmp.665 %tmp.666;
+        %tmp.669 = lgetv %height.7;
+        %tmp.670 = 2;
+        %tmp.671 = div %tmp.669 %tmp.670;
+        %tmp.672 = 40;
+        %tmp.673 = sub %tmp.671 %tmp.672;
+        %tmp.674 = getm $.Toybox.Graphics;
+        %tmp.675 = getv %tmp.674 :FONT_LARGE;
+        %tmp.677 = lgetv %maxLabel.3;
+        %tmp.679 = lgetv %textCenter.8;
+        invoke %tmp.660 %tmp.661(%tmp.667, %tmp.673, %tmp.675, %tmp.677, %tmp.679);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 117 12 ]
+        %tmp.680 = lgetv %dc;
+        %tmp.681 = getv function %tmp.680 :drawText;
+        %tmp.683 = lgetv %width.6;
+        %tmp.684 = 2;
+        %tmp.685 = div %tmp.683 %tmp.684;
+        %tmp.686 = 1;
+        %tmp.687 = add %tmp.685 %tmp.686;
+        %tmp.689 = lgetv %height.7;
+        %tmp.690 = 2;
+        %tmp.691 = div %tmp.689 %tmp.690;
+        %tmp.692 = 4;
+        %tmp.693 = add %tmp.691 %tmp.692;
+        %tmp.694 = getm $.Toybox.Graphics;
+        %tmp.695 = getv %tmp.694 :FONT_XTINY;
+        %tmp.697 = lgetv %uvLabel.4;
+        %tmp.699 = lgetv %textCenter.8;
+        invoke %tmp.680 %tmp.681(%tmp.687, %tmp.693, %tmp.695, %tmp.697, %tmp.699);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 118 12 ]
+        %tmp.700 = lgetv %dc;
+        %tmp.701 = getv function %tmp.700 :drawText;
+        %tmp.703 = lgetv %width.6;
+        %tmp.704 = 2;
+        %tmp.705 = div %tmp.703 %tmp.704;
+        %tmp.706 = 87;
+        %tmp.707 = sub %tmp.705 %tmp.706;
+        %tmp.709 = lgetv %height.7;
+        %tmp.710 = 2;
+        %tmp.711 = div %tmp.709 %tmp.710;
+        %tmp.712 = 7;
+        %tmp.713 = add %tmp.711 %tmp.712;
+        %tmp.714 = getm $.Toybox.Graphics;
+        %tmp.715 = getv %tmp.714 :FONT_LARGE;
+        %tmp.717 = lgetv %uvCur.11;
+        %tmp.719 = lgetv %textCenter.8;
+        invoke %tmp.700 %tmp.701(%tmp.707, %tmp.713, %tmp.715, %tmp.717, %tmp.719);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 119 12 ]
+        %tmp.720 = lgetv %dc;
+        %tmp.721 = getv function %tmp.720 :drawText;
+        %tmp.723 = lgetv %width.6;
+        %tmp.724 = 2;
+        %tmp.725 = div %tmp.723 %tmp.724;
+        %tmp.726 = 88;
+        %tmp.727 = add %tmp.725 %tmp.726;
+        %tmp.729 = lgetv %height.7;
+        %tmp.730 = 2;
+        %tmp.731 = div %tmp.729 %tmp.730;
+        %tmp.732 = 7;
+        %tmp.733 = add %tmp.731 %tmp.732;
+        %tmp.734 = getm $.Toybox.Graphics;
+        %tmp.735 = getv %tmp.734 :FONT_LARGE;
+        %tmp.737 = lgetv %uvMax.12;
+        %tmp.739 = lgetv %textCenter.8;
+        invoke %tmp.720 %tmp.721(%tmp.727, %tmp.733, %tmp.735, %tmp.737, %tmp.739);
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_114_54_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_114_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_114_8_if_end:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 123 7 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_7_if_stmt:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_11_begin:
+        %tmp.740 = self;
+        %tmp.741 = getv function %tmp.740 :isSingleFieldLayout;
+        %tmp.742 = invoke %tmp.740 %tmp.741();
+        %tmp.743 = not %tmp.742;
+        %tmp.744 = dup %tmp.743;
+        bf %tmp.744 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_38_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_38_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_39_begin:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_39_begin:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_39_begin:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_39_begin:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_39_begin:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_39_begin:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_39_begin:
+        %tmp.746 = lgetv %width.6;
+        %tmp.747 = 240;
+        %tmp.748 = eq %tmp.746 %tmp.747;
+        %tmp.749 = dup %tmp.748;
+        bt %tmp.749 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_55_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_55_false:
+        %tmp.751 = lgetv %width.6;
+        %tmp.752 = 280;
+        %tmp.753 = eq %tmp.751 %tmp.752;
+        %tmp.754 = or %tmp.748 %tmp.753;
+        push %tmp.754;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_55_end:
+        %tmp.755 = phi [%tmp.749 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_39_begin] [%tmp.754 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_55_false] [%tmp.755 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_55_end];
+        %tmp.756 = dup %tmp.755;
+        bt %tmp.756 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_71_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_71_false:
+        %tmp.758 = lgetv %width.6;
+        %tmp.759 = 119;
+        %tmp.760 = eq %tmp.758 %tmp.759;
+        %tmp.761 = or %tmp.755 %tmp.760;
+        push %tmp.761;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_71_end:
+        %tmp.762 = phi [%tmp.756 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_39_begin] [%tmp.761 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_71_false] [%tmp.762 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_71_end];
+        %tmp.763 = dup %tmp.762;
+        bt %tmp.763 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_14_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_14_false:
+        %tmp.765 = lgetv %width.6;
+        %tmp.766 = 129;
+        %tmp.767 = eq %tmp.765 %tmp.766;
+        %tmp.768 = or %tmp.762 %tmp.767;
+        push %tmp.768;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_14_end:
+        %tmp.769 = phi [%tmp.763 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_39_begin] [%tmp.768 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_14_false] [%tmp.769 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_14_end];
+        %tmp.770 = dup %tmp.769;
+        bt %tmp.770 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_30_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_30_false:
+        %tmp.772 = lgetv %width.6;
+        %tmp.773 = 260;
+        %tmp.774 = eq %tmp.772 %tmp.773;
+        %tmp.775 = or %tmp.769 %tmp.774;
+        push %tmp.775;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_30_end:
+        %tmp.776 = phi [%tmp.770 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_39_begin] [%tmp.775 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_30_false] [%tmp.776 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_30_end];
+        %tmp.777 = dup %tmp.776;
+        bt %tmp.777 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_46_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_46_false:
+        %tmp.779 = lgetv %width.6;
+        %tmp.780 = 218;
+        %tmp.781 = eq %tmp.779 %tmp.780;
+        %tmp.782 = or %tmp.776 %tmp.781;
+        push %tmp.782;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_46_end:
+        %tmp.783 = phi [%tmp.777 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_39_begin] [%tmp.782 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_46_false] [%tmp.783 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_46_end];
+        %tmp.784 = dup %tmp.783;
+        bt %tmp.784 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_62_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_62_false:
+        %tmp.786 = lgetv %width.6;
+        %tmp.787 = 108;
+        %tmp.788 = eq %tmp.786 %tmp.787;
+        %tmp.789 = or %tmp.783 %tmp.788;
+        push %tmp.789;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_62_end:
+        %tmp.790 = phi [%tmp.784 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_39_begin] [%tmp.789 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_62_false] [%tmp.790 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_62_end];
+        %tmp.791 = dup %tmp.790;
+        bt %tmp.791 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_78_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_78_false:
+        %tmp.793 = lgetv %width.6;
+        %tmp.794 = 139;
+        %tmp.795 = eq %tmp.793 %tmp.794;
+        %tmp.796 = or %tmp.790 %tmp.795;
+        push %tmp.796;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_78_end:
+        %tmp.797 = phi [%tmp.791 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_39_begin] [%tmp.796 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_78_false] [%tmp.797 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_78_end];
+        %tmp.798 = and %tmp.743 %tmp.797;
+        push %tmp.798;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_38_end:
+        %tmp.799 = phi [%tmp.744 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_11_begin] [%tmp.798 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_38_true] [%tmp.799 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_38_end];
+        bf %tmp.799 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_7_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_7_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_94_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 125 12 ]
+        %tmp.800 = lgetv %dc;
+        %tmp.801 = getv function %tmp.800 :drawText;
+        %tmp.803 = lgetv %width.6;
+        %tmp.804 = 2;
+        %tmp.805 = div %tmp.803 %tmp.804;
+        %tmp.806 = 14;
+        %tmp.807 = sub %tmp.805 %tmp.806;
+        %tmp.808 = 5;
+        %tmp.810 = lgetv %height.7;
+        %tmp.811 = 35;
+        %tmp.812 = sub %tmp.810 %tmp.811;
+        %tmp.813 = 2;
+        %tmp.814 = div %tmp.812 %tmp.813;
+        %tmp.815 = add %tmp.808 %tmp.814;
+        %tmp.816 = getm $.Toybox.Graphics;
+        %tmp.817 = getv %tmp.816 :FONT_XTINY;
+        %tmp.819 = lgetv %currentLabel.2;
+        %tmp.821 = lgetv %textCenter.8;
+        invoke %tmp.800 %tmp.801(%tmp.807, %tmp.815, %tmp.817, %tmp.819, %tmp.821);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 126 12 ]
+        %tmp.822 = lgetv %dc;
+        %tmp.823 = getv function %tmp.822 :drawText;
+        %tmp.825 = lgetv %width.6;
+        %tmp.826 = 2;
+        %tmp.827 = div %tmp.825 %tmp.826;
+        %tmp.828 = 30;
+        %tmp.829 = add %tmp.827 %tmp.828;
+        %tmp.830 = 5;
+        %tmp.832 = lgetv %height.7;
+        %tmp.833 = 35;
+        %tmp.834 = sub %tmp.832 %tmp.833;
+        %tmp.835 = 2;
+        %tmp.836 = div %tmp.834 %tmp.835;
+        %tmp.837 = add %tmp.830 %tmp.836;
+        %tmp.838 = getm $.Toybox.Graphics;
+        %tmp.839 = getv %tmp.838 :FONT_XTINY;
+        %tmp.841 = lgetv %maxLabel.3;
+        %tmp.843 = lgetv %textCenter.8;
+        invoke %tmp.822 %tmp.823(%tmp.829, %tmp.837, %tmp.839, %tmp.841, %tmp.843);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 127 12 ]
+        %tmp.844 = lgetv %dc;
+        %tmp.845 = getv function %tmp.844 :drawText;
+        %tmp.847 = lgetv %width.6;
+        %tmp.848 = 2;
+        %tmp.849 = div %tmp.847 %tmp.848;
+        %tmp.850 = 6;
+        %tmp.851 = add %tmp.849 %tmp.850;
+        %tmp.853 = lgetv %height.7;
+        %tmp.854 = 2;
+        %tmp.855 = div %tmp.853 %tmp.854;
+        %tmp.856 = 4;
+        %tmp.857 = add %tmp.855 %tmp.856;
+        %tmp.858 = getm $.Toybox.Graphics;
+        %tmp.859 = getv %tmp.858 :FONT_XTINY;
+        %tmp.861 = lgetv %uvLabel.4;
+        %tmp.863 = lgetv %textCenter.8;
+        invoke %tmp.844 %tmp.845(%tmp.851, %tmp.857, %tmp.859, %tmp.861, %tmp.863);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 128 12 ]
+        %tmp.864 = lgetv %dc;
+        %tmp.865 = getv function %tmp.864 :drawText;
+        %tmp.867 = lgetv %width.6;
+        %tmp.868 = 2;
+        %tmp.869 = div %tmp.867 %tmp.868;
+        %tmp.870 = 24;
+        %tmp.871 = sub %tmp.869 %tmp.870;
+        %tmp.873 = lgetv %height.7;
+        %tmp.874 = 2;
+        %tmp.875 = div %tmp.873 %tmp.874;
+        %tmp.876 = 4;
+        %tmp.877 = add %tmp.875 %tmp.876;
+        %tmp.878 = getm $.Toybox.Graphics;
+        %tmp.879 = getv %tmp.878 :FONT_XTINY;
+        %tmp.881 = lgetv %uvCur.11;
+        %tmp.883 = lgetv %textCenter.8;
+        invoke %tmp.864 %tmp.865(%tmp.871, %tmp.877, %tmp.879, %tmp.881, %tmp.883);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 129 12 ]
+        %tmp.884 = lgetv %dc;
+        %tmp.885 = getv function %tmp.884 :drawText;
+        %tmp.887 = lgetv %width.6;
+        %tmp.888 = 2;
+        %tmp.889 = div %tmp.887 %tmp.888;
+        %tmp.890 = 32;
+        %tmp.891 = add %tmp.889 %tmp.890;
+        %tmp.893 = lgetv %height.7;
+        %tmp.894 = 2;
+        %tmp.895 = div %tmp.893 %tmp.894;
+        %tmp.896 = 4;
+        %tmp.897 = add %tmp.895 %tmp.896;
+        %tmp.898 = getm $.Toybox.Graphics;
+        %tmp.899 = getv %tmp.898 :FONT_XTINY;
+        %tmp.901 = lgetv %uvMax.12;
+        %tmp.903 = lgetv %textCenter.8;
+        invoke %tmp.884 %tmp.885(%tmp.891, %tmp.897, %tmp.899, %tmp.901, %tmp.903);
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_124_94_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_7_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_123_7_if_end:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 131 8 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_8_if_stmt:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_12_begin:
+        %tmp.904 = self;
+        %tmp.905 = getv function %tmp.904 :isSingleFieldLayout;
+        %tmp.906 = invoke %tmp.904 %tmp.905();
+        %tmp.907 = dup %tmp.906;
+        bf %tmp.907 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_38_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_38_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_39_begin:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_39_begin:
+        %tmp.909 = lgetv %width.6;
+        %tmp.910 = 280;
+        %tmp.911 = eq %tmp.909 %tmp.910;
+        %tmp.912 = dup %tmp.911;
+        bt %tmp.912 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_55_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_55_false:
+        %tmp.914 = lgetv %width.6;
+        %tmp.915 = 240;
+        %tmp.916 = eq %tmp.914 %tmp.915;
+        %tmp.917 = or %tmp.911 %tmp.916;
+        push %tmp.917;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_55_end:
+        %tmp.918 = phi [%tmp.912 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_39_begin] [%tmp.917 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_55_false] [%tmp.918 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_55_end];
+        %tmp.919 = dup %tmp.918;
+        bt %tmp.919 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_71_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_71_false:
+        %tmp.921 = lgetv %width.6;
+        %tmp.922 = 260;
+        %tmp.923 = eq %tmp.921 %tmp.922;
+        %tmp.924 = or %tmp.918 %tmp.923;
+        push %tmp.924;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_71_end:
+        %tmp.925 = phi [%tmp.919 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_39_begin] [%tmp.924 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_71_false] [%tmp.925 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_71_end];
+        %tmp.926 = and %tmp.906 %tmp.925;
+        push %tmp.926;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_38_end:
+        %tmp.927 = phi [%tmp.907 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_12_begin] [%tmp.926 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_38_true] [%tmp.927 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_38_end];
+        bf %tmp.927 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_8_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_86_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 132 12 ]
+        %tmp.928 = lgetv %dc;
+        %tmp.929 = getv function %tmp.928 :drawText;
+        %tmp.931 = lgetv %width.6;
+        %tmp.932 = 2;
+        %tmp.933 = div %tmp.931 %tmp.932;
+        %tmp.934 = 40;
+        %tmp.935 = sub %tmp.933 %tmp.934;
+        %tmp.937 = lgetv %height.7;
+        %tmp.938 = 2;
+        %tmp.939 = div %tmp.937 %tmp.938;
+        %tmp.940 = 40;
+        %tmp.941 = sub %tmp.939 %tmp.940;
+        %tmp.942 = getm $.Toybox.Graphics;
+        %tmp.943 = getv %tmp.942 :FONT_LARGE;
+        %tmp.945 = lgetv %currentLabel.2;
+        %tmp.947 = lgetv %textCenter.8;
+        invoke %tmp.928 %tmp.929(%tmp.935, %tmp.941, %tmp.943, %tmp.945, %tmp.947);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 133 12 ]
+        %tmp.948 = lgetv %dc;
+        %tmp.949 = getv function %tmp.948 :drawText;
+        %tmp.951 = lgetv %width.6;
+        %tmp.952 = 2;
+        %tmp.953 = div %tmp.951 %tmp.952;
+        %tmp.954 = 55;
+        %tmp.955 = add %tmp.953 %tmp.954;
+        %tmp.957 = lgetv %height.7;
+        %tmp.958 = 2;
+        %tmp.959 = div %tmp.957 %tmp.958;
+        %tmp.960 = 40;
+        %tmp.961 = sub %tmp.959 %tmp.960;
+        %tmp.962 = getm $.Toybox.Graphics;
+        %tmp.963 = getv %tmp.962 :FONT_LARGE;
+        %tmp.965 = lgetv %maxLabel.3;
+        %tmp.967 = lgetv %textCenter.8;
+        invoke %tmp.948 %tmp.949(%tmp.955, %tmp.961, %tmp.963, %tmp.965, %tmp.967);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 134 12 ]
+        %tmp.968 = lgetv %dc;
+        %tmp.969 = getv function %tmp.968 :drawText;
+        %tmp.971 = lgetv %width.6;
+        %tmp.972 = 2;
+        %tmp.973 = div %tmp.971 %tmp.972;
+        %tmp.974 = 1;
+        %tmp.975 = add %tmp.973 %tmp.974;
+        %tmp.977 = lgetv %height.7;
+        %tmp.978 = 2;
+        %tmp.979 = div %tmp.977 %tmp.978;
+        %tmp.980 = 4;
+        %tmp.981 = add %tmp.979 %tmp.980;
+        %tmp.982 = getm $.Toybox.Graphics;
+        %tmp.983 = getv %tmp.982 :FONT_XTINY;
+        %tmp.985 = lgetv %uvLabel.4;
+        %tmp.987 = lgetv %textCenter.8;
+        invoke %tmp.968 %tmp.969(%tmp.975, %tmp.981, %tmp.983, %tmp.985, %tmp.987);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 135 12 ]
+        %tmp.988 = lgetv %dc;
+        %tmp.989 = getv function %tmp.988 :drawText;
+        %tmp.991 = lgetv %width.6;
+        %tmp.992 = 2;
+        %tmp.993 = div %tmp.991 %tmp.992;
+        %tmp.994 = 58;
+        %tmp.995 = sub %tmp.993 %tmp.994;
+        %tmp.997 = lgetv %height.7;
+        %tmp.998 = 2;
+        %tmp.999 = div %tmp.997 %tmp.998;
+        %tmp.1000 = 7;
+        %tmp.1001 = add %tmp.999 %tmp.1000;
+        %tmp.1002 = getm $.Toybox.Graphics;
+        %tmp.1003 = getv %tmp.1002 :FONT_LARGE;
+        %tmp.1005 = lgetv %uvCur.11;
+        %tmp.1007 = lgetv %textCenter.8;
+        invoke %tmp.988 %tmp.989(%tmp.995, %tmp.1001, %tmp.1003, %tmp.1005, %tmp.1007);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc" 136 12 ]
+        %tmp.1008 = lgetv %dc;
+        %tmp.1009 = getv function %tmp.1008 :drawText;
+        %tmp.1011 = lgetv %width.6;
+        %tmp.1012 = 2;
+        %tmp.1013 = div %tmp.1011 %tmp.1012;
+        %tmp.1014 = 57;
+        %tmp.1015 = add %tmp.1013 %tmp.1014;
+        %tmp.1017 = lgetv %height.7;
+        %tmp.1018 = 2;
+        %tmp.1019 = div %tmp.1017 %tmp.1018;
+        %tmp.1020 = 7;
+        %tmp.1021 = add %tmp.1019 %tmp.1020;
+        %tmp.1022 = getm $.Toybox.Graphics;
+        %tmp.1023 = getv %tmp.1022 :FONT_LARGE;
+        %tmp.1025 = lgetv %uvMax.12;
+        %tmp.1027 = lgetv %textCenter.8;
+        invoke %tmp.1008 %tmp.1009(%tmp.1015, %tmp.1021, %tmp.1023, %tmp.1025, %tmp.1027);
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_86_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_131_8_if_end:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldView_mc_45_40_stop:
+    }
+}
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldView.mc"; @line = 1; ]
+<init> {
+}

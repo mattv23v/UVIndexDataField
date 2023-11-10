@@ -1,0 +1,244 @@
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 1; ]
+import Toybox.Application;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 2; ]
+import Toybox.System;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 3; ]
+import Toybox.Time;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 4; ]
+import Toybox.Background;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 5; ]
+import Toybox.Position;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 6; ]
+import Toybox.Time.Gregorian;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 7; ]
+import Toybox.Lang;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 9; background = true; ]
+class UVIndexFieldApp extends Application.AppBase{
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 10; ]
+    <init> {
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 11 12 ]
+        %tmp.1 = newa 2;
+        %tmp.2 = 0;
+        %tmp.3 = dup %tmp.1;
+        %tmp.4 = aputv %tmp.3 0 %tmp.2;
+        %tmp.5 = 0;
+        %tmp.6 = dup %tmp.4;
+        %tmp.7 = aputv %tmp.6 1 %tmp.5;
+        putv self :uv %tmp.7;
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 10; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 11; @position = 12; ]
+    private
+    var uv;
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 12; @position = 12; ]
+    private
+    var inBackground = false;
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 14; ]
+    public
+    function initialize() as Void {
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_14_33_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 15 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 16 8 ]
+        %tmp.4 = getm $.Toybox.System;
+        %tmp.5 = getv function %tmp.4 :println;
+        %tmp.6 = "initialize app";
+        invoke %tmp.4 %tmp.5(%tmp.6);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 17 8 ]
+        [ "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_14_33_start" "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_14_33_stop" ]
+        %savedUV.1 = local;
+        %tmp.7 = getm $.Toybox.Application;
+        %tmp.8 = getv %tmp.7 :Storage;
+        %tmp.9 = getv function %tmp.8 :getValue;
+        %tmp.10 = "lastuv";
+        %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
+        lputv %savedUV.1 %tmp.11;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 18 8 ]
+        %tmp.12 = getm $.Toybox.System;
+        %tmp.13 = getv function %tmp.12 :println;
+        %tmp.14 = "saved UV ";
+        %tmp.16 = lgetv %savedUV.1;
+        %tmp.17 = add %tmp.14 %tmp.16;
+        invoke %tmp.12 %tmp.13(%tmp.17);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 19 8 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_19_8_if_stmt:
+        %tmp.19 = lgetv %savedUV.1;
+        %tmp.20 = null;
+        %tmp.21 = ne %tmp.19 %tmp.20;
+        bf %tmp.21 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_19_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_19_8_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_19_29_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 20 12 ]
+        %tmp.23 = lgetv %savedUV.1;
+        %tmp.24 = as %tmp.23 { (!Null) };
+        putv self :uv %tmp.24;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_19_29_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_19_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_19_8_if_end:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_14_33_stop:
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 24; ]
+    public
+    function getServiceDelegate() {
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_24_40_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 25 8 ]
+        %tmp.1 = true;
+        putv self :inBackground %tmp.1;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 26 8 ]
+        %tmp.2 = newa Array<ServiceDelegate> 1;
+        %tmp.6 = getm $;
+        %tmp.7 = getv %tmp.6 :MyServiceDelegate;
+        %tmp.3 = newc %tmp.7 ();
+        %tmp.8 = dup %tmp.2;
+        %tmp.9 = aputv %tmp.8 0 %tmp.3;
+        ret %tmp.9;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_24_40_stop:
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 30; ]
+    function onStart(state as Dictionary or Null) as Void {
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 34; ]
+    function onStop(state as Dictionary or Null) as Void {
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_34_50_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 35 8 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_35_8_if_stmt:
+        %tmp.2 = getv ? :inBackground;
+        %tmp.3 = not %tmp.2;
+        bf %tmp.3 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_35_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_35_8_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_35_26_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 36 12 ]
+        %tmp.4 = getm $.Toybox.System;
+        %tmp.5 = getv function %tmp.4 :println;
+        %tmp.6 = "exit app";
+        invoke %tmp.4 %tmp.5(%tmp.6);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 37 12 ]
+        %tmp.7 = getm $.Toybox.Background;
+        %tmp.8 = getv function %tmp.7 :deleteTemporalEvent;
+        invoke %tmp.7 %tmp.8();
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_35_26_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_35_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_35_8_if_end:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_34_50_stop:
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 41; ]
+    public
+    function getUv() {
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_41_27_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 42 8 ]
+        %tmp.2 = getv ? :uv;
+        ret %tmp.2;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_41_27_stop:
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 45; ]
+    function onBackgroundData(data) {
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_45_36_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 46 8 ]
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "callback";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 47 8 ]
+        %tmp.4 = getm $.Toybox.System;
+        %tmp.5 = getv function %tmp.4 :println;
+        %tmp.7 = lgetv %data;
+        invoke %tmp.4 %tmp.5(%tmp.7);
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 48 8 ]
+        %tmp.9 = lgetv %data;
+        putv self :uv %tmp.9;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 49 8 ]
+        %tmp.11 = getv ? :Storage;
+        %tmp.12 = getv function %tmp.11 :setValue;
+        %tmp.13 = "lastuv";
+        %tmp.15 = getv ? :uv;
+        invoke %tmp.11 %tmp.12(%tmp.13, %tmp.15);
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_45_36_stop:
+    }
+    //! Return the initial view of your application here
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 54; ]
+    function getInitialView() {
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_54_30_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 55 7 ]
+        %tmp.1 = newa 1;
+        %tmp.5 = getv ? :UVIndexFieldView;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        ret %tmp.7;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_54_30_stop:
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 58; ]
+    function getApp() as UVIndexFieldApp {
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_58_41_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 59 8 ]
+        %tmp.1 = getm $.Toybox.Application;
+        %tmp.2 = getv function %tmp.1 :getApp;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = as %tmp.3 UVIndexFieldApp;
+        ret %tmp.4;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_58_41_stop:
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 62; ]
+    function registerEvent() {
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_62_29_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 63 8 ]
+        [ "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_62_29_start" "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_62_29_stop" ]
+        %lastTime.1 = local;
+        %tmp.1 = getm $.Toybox.Background;
+        %tmp.2 = getv function %tmp.1 :getLastTemporalEventTime;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %lastTime.1 %tmp.3;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 64 8 ]
+        [ "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_62_29_start" "C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_62_29_stop" ]
+        %now.2 = local;
+        %tmp.4 = getm $.Toybox.Time;
+        %tmp.5 = getv function %tmp.4 :now;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %now.2 %tmp.6;
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 67 8 ]
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_67_8_if_stmt:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_67_12_begin:
+        %tmp.8 = lgetv %lastTime.1;
+        %tmp.9 = null;
+        %tmp.10 = eq %tmp.8 %tmp.9;
+        %tmp.11 = dup %tmp.10;
+        bt %tmp.11 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_67_32_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_67_32_false:
+        %tmp.12 = lgetv %now.2;
+        %tmp.13 = getv function %tmp.12 :value;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = lgetv %lastTime.1;
+        %tmp.16 = as %tmp.15 { (!Null) };
+        %tmp.17 = getv function %tmp.16 :value;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        %tmp.19 = 900;
+        %tmp.20 = add %tmp.18 %tmp.19;
+        %tmp.21 = gt %tmp.14 %tmp.20;
+        %tmp.22 = or %tmp.10 %tmp.21;
+        push %tmp.22;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_67_32_end:
+        %tmp.23 = phi [%tmp.11 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_67_12_begin] [%tmp.22 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_67_32_false] [%tmp.23 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_67_32_end];
+        bf %tmp.23 @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_67_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_67_8_if_true:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_67_72_start:
+[ "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc" 68 12 ]
+        %tmp.24 = getm $.Toybox.Background;
+        %tmp.25 = getv function %tmp.24 :registerForTemporalEvent;
+        %tmp.26 = getm $.Toybox.Time;
+        %tmp.27 = getv function %tmp.26 :now;
+        %tmp.28 = invoke %tmp.26 %tmp.27();
+        invoke %tmp.24 %tmp.25(%tmp.28);
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_67_72_stop:
+        goto @C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_67_8_if_end;
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_67_8_if_end:
+C_Garmin_Projects_UVIndexDataField_UVIndexDataField_UVIndexDataField_source_UVIndexFieldApp_mc_62_29_stop:
+    }
+}
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\source\UVIndexFieldApp.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,65 @@
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var LauncherIcon as Symbol;
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 12; ]
+    module Fonts {
+        [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 15; ]
+    module JsonData {
+        [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 15; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 18; ]
+    module Layouts {
+        [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 18; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 21; ]
+    module Menus {
+        [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 21; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 24; ]
+    module Strings {
+        [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 24; ]
+        <init> {
+        }
+        [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 25; @position = 27; initialized = true; ]
+        var maxUVLabel as Symbol;
+        [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 26; @position = 27; initialized = true; ]
+        var curUVLabel as Symbol;
+        [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 27; @position = 27; initialized = true; ]
+        var uvTag as Symbol;
+        [ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 28; @position = 27; initialized = true; ]
+        var AppName as Symbol;
+    }
+}
+[ @file = "C:\Garmin Projects\UVIndexDataField\UVIndexDataField\UVIndexDataField\bin\gen\006-B2187-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}
